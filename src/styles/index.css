@@ -1530,8 +1530,8 @@ a {
 }
 
 .contact_benefit_icon {
-	width: 50px;
-	height: 50px;
+	width: 63px;
+	height: 63px;
 	fill: none;
 	stroke: var(--color_gold);
 	stroke-width: 1.55;
@@ -1746,6 +1746,199 @@ a {
 	stroke-linejoin: round;
 }
 
+.site_footer {
+	position: relative;
+	overflow: hidden;
+	border-top: 1px solid rgba(210, 168, 102, 0.92);
+	background:#082A2D;
+	color: var(--color_ivory);
+}
+
+.site_footer_inner {
+	display: grid;
+	grid-template-columns: minmax(255px, 1.2fr) minmax(150px, 0.68fr) minmax(220px, 0.9fr) minmax(190px, 0.78fr);
+	gap: 48px;
+	width: min(100%, var(--site_max_width));
+	margin: 0 auto;
+	padding: 82px 72px 62px;
+}
+
+.footer_brand_block,
+.footer_column {
+	position: relative;
+	min-width: 0;
+}
+
+.footer_brand_block::after,
+.footer_column:not(.footer_schedule)::after {
+	position: absolute;
+	top: 0;
+	right: -24px;
+	width: 1px;
+	height: 100%;
+	min-height: 180px;
+	content: "";
+	background: rgba(210, 168, 102, 0.48);
+}
+
+.footer_brand {
+	position: static;
+	justify-items: start;
+	gap: 0;
+	width: max-content;
+	margin: 0 0 31px;
+	color: var(--color_ivory);
+	transform: none;
+}
+
+.footer_brand .brand_palm_icon {
+	width: 31px;
+	height: 31px;
+	margin: 0 0 10px 46px;
+	stroke: var(--color_gold);
+}
+
+.footer_brand .brand_name {
+	font-size: 45px;
+	line-height: 0.82;
+}
+
+.footer_brand .brand_place {
+	margin-top: 11px;
+	font-size: 12px;
+	letter-spacing: 0.47em;
+	width: 100%;
+}
+
+.footer_brand_block > p {
+	max-width: 305px;
+	margin: 0;
+	color: rgba(248, 243, 234, 0.84);
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 1.62;
+}
+
+.footer_socials {
+	display: flex;
+	gap: 14px;
+	margin-top: 30px;
+}
+
+.footer_socials a {
+	display: grid;
+	place-items: center;
+	width: 31px;
+	height: 31px;
+	border: 1px solid rgba(248, 243, 234, 0.72);
+	border-radius: 999px;
+	color: var(--color_ivory);
+	transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.footer_socials a:hover {
+	border-color: var(--color_gold);
+	color: var(--color_gold);
+	transform: translateY(-1px);
+}
+
+.footer_socials svg {
+	width: 19px;
+	height: 19px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.6;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.footer_contact svg {
+	width: 19px;
+	height: 19px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.6;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.footer_socials a:nth-child(2) svg {
+	fill: currentColor;
+	stroke: none;
+}
+
+.footer_column {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-top: 12px;
+}
+
+.footer_column h2 {
+	margin: 0 0 27px;
+	color: rgba(248, 243, 234, 0.96);
+	font-family: var(--font_body);
+	font-size: 13px;
+	font-weight: 800;
+	letter-spacing: 0.11em;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+
+.footer_column a,
+.footer_column p {
+	margin: 0;
+	color: rgba(248, 243, 234, 0.84);
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.55;
+	text-decoration: none;
+}
+
+.footer_column a {
+	margin-bottom: 10px;
+	transition: color 180ms ease;
+}
+
+.footer_column a:hover {
+	color: var(--color_gold_soft);
+}
+
+.footer_contact a,
+.footer_contact p {
+	display: grid;
+	grid-template-columns: 22px minmax(0, 1fr);
+	gap: 12px;
+	align-items: start;
+	margin-bottom: 17px;
+}
+
+.footer_contact svg {
+	margin-top: 3px;
+	color: var(--color_ivory);
+}
+
+.footer_schedule p + p {
+	margin-top: 28px;
+}
+
+.footer_schedule span {
+	display: inline-block;
+	margin-top: 4px;
+}
+
+.footer_disclaimer {
+	width: min(calc(100% - 144px), calc(var(--site_max_width) - 144px));
+	margin: 0 auto;
+	padding: 30px 0 34px;
+	border-top: 1px solid rgba(210, 168, 102, 0.62);
+	color: rgba(248, 243, 234, 0.82);
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 1.45;
+	text-align: center;
+}
+
 @media (max-width: 1180px) {
 	.nav_group {
 		gap: 20px;
@@ -1912,6 +2105,21 @@ a {
 	.contact_submit {
 		min-height: 58px;
 		font-size: 17px;
+	}
+
+	.site_footer_inner {
+		grid-template-columns: minmax(230px, 1.1fr) minmax(130px, 0.62fr) minmax(190px, 0.82fr) minmax(170px, 0.72fr);
+		gap: 34px;
+		padding: 70px 48px 54px;
+	}
+
+	.footer_brand_block::after,
+	.footer_column:not(.footer_schedule)::after {
+		right: -17px;
+	}
+
+	.footer_disclaimer {
+		width: calc(100% - 96px);
 	}
 }
 
@@ -2313,8 +2521,8 @@ a {
 	}
 
 	.contact_benefit_icon {
-		width: 44px;
-		height: 44px;
+		width: 55px;
+		height: 55px;
 		margin-bottom: 15px;
 	}
 
@@ -2343,6 +2551,37 @@ a {
 		margin: 0 auto -56px;
 		padding: 42px 34px 34px;
 		transform: none;
+	}
+
+	.site_footer_inner {
+		grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.82fr);
+		gap: 0 42px;
+		padding: 62px 24px 48px;
+	}
+
+	.footer_brand_block,
+	.footer_column {
+		padding: 0 0 34px;
+		margin-bottom: 34px;
+		border-bottom: 1px solid rgba(210, 168, 102, 0.34);
+	}
+
+	.footer_brand_block::after,
+	.footer_column:not(.footer_schedule)::after {
+		display: none;
+	}
+
+	.footer_column h2 {
+		margin-bottom: 20px;
+	}
+
+	.footer_schedule {
+		margin-bottom: 0;
+	}
+
+	.footer_disclaimer {
+		width: calc(100% - 48px);
+		padding: 24px 0 30px;
 	}
 }
 
@@ -2875,8 +3114,8 @@ a {
 	}
 
 	.contact_benefit_icon {
-		width: 40px;
-		height: 40px;
+		width: 50px;
+		height: 50px;
 		margin: 0;
 	}
 
@@ -2928,6 +3167,61 @@ a {
 
 	.contact_privacy {
 		align-items: flex-start;
+		font-size: 10px;
+	}
+
+	.site_footer_inner {
+		grid-template-columns: 1fr;
+		padding: 50px 18px 34px;
+	}
+
+	.footer_brand_block,
+	.footer_column {
+		padding-bottom: 28px;
+		margin-bottom: 28px;
+	}
+
+	.footer_brand {
+		margin-bottom: 24px;
+	}
+
+	.footer_brand .brand_palm_icon {
+		display: block;
+		width: 27px;
+		height: 27px;
+		margin-left: 41px;
+	}
+
+	.footer_brand .brand_name {
+		font-size: 32px;
+	}
+
+	.footer_brand .brand_place {
+		font-size: 10px;
+	}
+
+	.footer_brand_block > p,
+	.footer_column a,
+	.footer_column p {
+		font-size: 12px;
+		line-height: 1.62;
+	}
+
+	.footer_socials {
+		margin-top: 24px;
+	}
+
+	.footer_column h2 {
+		font-size: 11px;
+	}
+
+	.footer_schedule p + p {
+		margin-top: 22px;
+	}
+
+	.footer_disclaimer {
+		width: calc(100% - 36px);
+		padding: 22px 0 27px;
 		font-size: 10px;
 	}
 }
