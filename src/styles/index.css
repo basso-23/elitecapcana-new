@@ -3530,3 +3530,611 @@ display: none;
 		font-size: 10px;
 	}
 }
+
+@media (max-width: 1024px) {
+	.site_shell {
+		overflow-x: clip;
+	}
+
+	.site_header {
+		padding: 24px 16px 0;
+	}
+
+	.site_nav {
+		grid-template-columns: minmax(0, 1fr) auto;
+		align-items: center;
+		min-height: 72px;
+	}
+
+	.nav_group_left,
+	.nav_group_right a:not(.nav_contact) {
+		display: none;
+	}
+
+	.nav_group_right {
+		grid-column: 2;
+		gap: 0;
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	.nav_contact {
+		min-width: 0;
+		height: 32px;
+		padding: 0 14px;
+		font-size: 10px;
+		letter-spacing: 0.08em;
+	}
+
+	.brand_mark {
+		grid-column: 1;
+		grid-row: 1;
+		justify-items: start;
+		width: min-content;
+		max-width: 170px;
+		margin-top: 0;
+	}
+
+	.brand_palm_icon {
+		display: none;
+	}
+
+	.brand_name {
+		font-size: clamp(24px, 6vw, 32px);
+		letter-spacing: 0.18em;
+	}
+
+	.brand_place {
+		margin-top: 8px;
+		font-size: clamp(9px, 2.4vw, 12px);
+		letter-spacing: 0.32em;
+	}
+
+	.hero_section,
+	.resort_hero {
+		height: auto;
+		min-height: min(700px, 100svh);
+		max-height: none;
+	}
+
+	.hero_image,
+	.resort_hero_image {
+		width: 100%;
+		height: 100%;
+		object-position: 68% 50%;
+		transform: none;
+	}
+
+	.hero_content_wrap,
+	.resort_hero_content_wrap {
+		align-items: flex-end;
+		width: 100%;
+		min-height: min(700px, 100svh);
+		padding: 116px 16px 72px;
+	}
+
+	.resort_hero_content_wrap {
+		align-items: flex-start;
+		padding-top: 96px;
+	}
+
+	.hero_content,
+	.resort_hero_content {
+		width: 100%;
+		max-width: 520px;
+		margin-top: 0;
+	}
+
+	.hero_content h1,
+	.resort_hero_content h1 {
+		max-width: 100%;
+		font-size: clamp(2.75rem, 11.5vw, 4rem);
+		line-height: 0.98;
+	}
+
+	.hero_kicker {
+		max-width: 300px;
+		margin-top: 24px;
+		font-size: 12px;
+		letter-spacing: 0.09em;
+	}
+
+	.hero_actions {
+		width: 100%;
+		margin-top: 28px;
+	}
+
+	.primary_cta,
+	.resort_hero_cta {
+		width: min(100%, 286px);
+		min-height: 56px;
+		padding: 0 20px;
+		font-size: 14px;
+	}
+
+	.hero_hint {
+		display: none;
+	}
+
+	.scroll_cue {
+		bottom: 16px;
+		transform: translateX(-50%) scale(0.86);
+	}
+
+	.resort_hero_text {
+		max-width: 320px;
+		font-size: 13px;
+	}
+
+	.resort_hero_meta {
+		gap: 14px;
+		margin-top: 72px;
+	}
+
+	.resort_hero_meta_icon {
+		width: 38px;
+		height: 38px;
+	}
+
+	.entrance_inner,
+	.location_inner,
+	.lifestyle_inner,
+	.residences_inner,
+	.floor_distribution_inner,
+	.contact_content,
+	.site_footer_inner {
+		width: 100%;
+		padding-right: 16px;
+		padding-left: 16px;
+	}
+
+	.entrance_inner {
+		display: block;
+		min-height: 0;
+		padding-top: 56px;
+		padding-bottom: 0;
+	}
+
+	.entrance_copy,
+	.location_copy,
+	.lifestyle_copy {
+		max-width: 100%;
+		margin: 0;
+	}
+
+	.entrance_copy h2,
+	.location_section .entrance_copy h2,
+	.lifestyle_section .lifestyle_copy h2,
+	.residences_header h2,
+	.floor_distribution_header h2,
+	.contact_content h2 {
+		max-width: 100%;
+		font-size: clamp(2.35rem, 10vw, 3.4rem);
+		line-height: 1.04;
+	}
+
+	.entrance_copy p,
+	.location_section .entrance_copy p,
+	.lifestyle_section .lifestyle_copy p,
+	.residences_header p,
+	.floor_distribution_header p,
+	.contact_content > p {
+		max-width: 100%;
+		font-size: 13px;
+		line-height: 1.62;
+	}
+
+	.entrance_stats {
+		grid-template-columns: 1fr;
+		width: 100%;
+		margin-top: 34px;
+	}
+
+	.entrance_stat,
+	.entrance_stat:first-child {
+		display: grid;
+		justify-items: center;
+		min-height: 0;
+		padding: 16px 0;
+		border-left: 0;
+		border-top: 1px solid rgba(7, 52, 58, 0.18);
+		text-align: center;
+	}
+
+	.entrance_stat:first-child {
+		border-top: 0;
+	}
+
+	.entrance_stat span {
+		font-size: 14px;
+	}
+
+	.entrance_visual {
+		position: relative;
+		top: auto;
+		right: auto;
+		bottom: auto;
+		width: 100%;
+		max-width: 100%;
+		height: clamp(240px, 64vw, 380px);
+		margin: 36px 0 0;
+		border-left: 0;
+	}
+
+	.location_inner {
+		display: block;
+		min-height: 0;
+		padding-top: 56px;
+		padding-bottom: 58px;
+	}
+
+	.location_actions {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+		gap: 10px;
+		margin-top: 28px;
+	}
+
+	.location_map_button {
+		width: 100%;
+		min-height: 44px;
+		padding: 0 12px;
+	}
+
+	.location_map {
+		width: 100%;
+		max-width: 440px;
+		margin-top: 38px;
+	}
+
+	.location_places {
+		display: grid;
+		grid-template-columns: 1fr;
+		width: 100%;
+		margin-top: 36px;
+		margin-left: 0;
+	}
+
+	.location_place {
+		grid-template-columns: 40px minmax(0, 1fr);
+		gap: 14px;
+		padding-bottom: 16px;
+		margin-bottom: 16px;
+	}
+
+	.lifestyle_inner {
+		display: block;
+		min-height: 0;
+		padding-top: 56px;
+		padding-bottom: 58px;
+	}
+
+	.lifestyle_copy {
+		padding: 0;
+	}
+
+	.lifestyle_gallery {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: clamp(220px, 70vw, 300px) clamp(160px, 52vw, 220px) clamp(160px, 52vw, 220px);
+		gap: 12px;
+		width: 100%;
+		min-height: 0;
+		max-height: none;
+		margin-top: 36px;
+		padding-left: 0;
+	}
+
+	.lifestyle_photo_main {
+		grid-column: auto;
+	}
+
+	.lifestyle_features {
+		grid-template-columns: 1fr;
+		gap: 18px;
+		width: 100%;
+		margin-top: 34px;
+	}
+
+	.lifestyle_text_link {
+		margin-top: 34px;
+	}
+
+	.residences_inner,
+	.floor_distribution_inner {
+		padding-top: 52px;
+		padding-bottom: 56px;
+	}
+
+	.residences_brand,
+	.contact_brand,
+	.footer_brand {
+		max-width: 180px;
+	}
+
+	.residences_brand .brand_palm_icon,
+	.contact_brand .brand_palm_icon,
+	.footer_brand .brand_palm_icon {
+		display: block;
+		width: 28px;
+		height: 28px;
+		margin-left: 0;
+	}
+
+	.residences_brand .brand_name,
+	.contact_brand .brand_name,
+	.footer_brand .brand_name {
+		font-size: 30px;
+	}
+
+	.residences_brand .brand_place,
+	.contact_brand .brand_place,
+	.footer_brand .brand_place {
+		font-size: 10px;
+	}
+
+	.residence_carousel {
+		padding-bottom: 56px;
+	}
+
+	.residence_cards_track {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.residence_cards_view,
+	.residence_card {
+		height: 520px;
+	}
+
+	.residence_card_media {
+		height: 204px;
+	}
+
+	.residence_floorplan {
+		top: 168px;
+		width: min(74%, 210px);
+		height: 76px;
+		padding: 6px;
+	}
+
+	.residence_card_body {
+		height: calc(100% - 204px);
+		padding: 78px 22px 24px;
+	}
+
+	.residence_card_body h3 {
+		margin-bottom: 16px;
+		font-size: 18px;
+	}
+
+	.residence_card_fact {
+		gap: 10px;
+		margin-bottom: 12px;
+		font-size: 13px;
+	}
+
+	.residence_carousel_controls {
+		top: auto;
+		right: 50%;
+		bottom: 0;
+		display: flex;
+		transform: translateX(50%);
+	}
+
+	.residence_benefits,
+	.floor_benefits {
+		grid-template-columns: 1fr;
+		width: 100%;
+		padding: 6px 16px;
+	}
+
+	.residence_benefits .entrance_stat,
+	.residence_benefits .entrance_stat:first-child,
+	.residence_benefits .entrance_stat:nth-child(-n + 2),
+	.floor_benefits .entrance_stat,
+	.floor_benefits .entrance_stat:first-child {
+		grid-template-columns: 42px minmax(0, 1fr);
+		justify-items: start;
+		padding: 16px 0;
+		border-left: 0;
+		border-top: 1px solid rgba(210, 168, 102, 0.3);
+		text-align: left;
+	}
+
+	.residence_benefits .entrance_stat:first-child,
+	.floor_benefits .entrance_stat:first-child {
+		border-top: 0;
+	}
+
+	.floor_tabs {
+		width: 100%;
+		max-width: 320px;
+	}
+
+	.floor_distribution_layout {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 26px;
+		margin-top: 30px;
+	}
+
+	.floor_building_panel,
+	.floor_building_panel_b {
+		justify-self: stretch;
+		width: 100%;
+	}
+
+	.floor_building_panel h3 {
+		font-size: clamp(2rem, 8vw, 2.5rem);
+	}
+
+	.floor_building_panel p {
+		max-width: 100%;
+		margin-top: 16px;
+	}
+
+	.floor_masterplan {
+		grid-column: auto;
+		grid-row: auto;
+		width: 100%;
+		margin: 0;
+	}
+
+	.floor_masterplan img {
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+	}
+
+	.floor_pin {
+		width: 23px;
+		height: 23px;
+		font-size: 10px;
+	}
+
+	.contact_section {
+		background: #fbf8f1;
+	}
+
+	.contact_inner {
+		display: grid;
+		grid-template-columns: 1fr;
+		width: 100%;
+		min-height: 0;
+		background: #fbf8f1;
+	}
+
+	.contact_inner > * {
+		min-width: 0;
+	}
+
+	.contact_content {
+		width: 100%;
+		max-width: 100%;
+		min-width: 0;
+		min-height: 0;
+		padding-top: 48px;
+		padding-bottom: 36px;
+	}
+
+	.contact_content h2,
+	.contact_content > p,
+	.contact_benefits,
+	.contact_benefit,
+	.contact_benefit p,
+	.contact_benefit strong,
+	.contact_benefit span {
+		width: auto;
+		max-width: 100%;
+	}
+
+	.contact_brand {
+		margin-bottom: 34px;
+	}
+
+	.contact_benefits {
+		grid-template-columns: 1fr;
+		width: 100%;
+		max-width: 100%;
+		gap: 22px;
+		margin-top: 34px;
+	}
+
+	.contact_benefit {
+		display: grid;
+		grid-template-columns: 46px minmax(0, 1fr);
+		gap: 14px;
+		align-items: center;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.contact_benefit_icon {
+		width: 46px;
+		height: 46px;
+		margin: 0;
+	}
+
+	.contact_form_card {
+		position: relative;
+		top: auto;
+		left: auto;
+		grid-row: 2;
+		width: calc(100% - 32px);
+		max-width: 590px;
+		min-width: 0;
+		min-height: 0;
+		margin: 0 auto -34px;
+		padding: 30px 16px 26px;
+		transform: none;
+	}
+
+	.contact_field_grid {
+		grid-template-columns: 1fr;
+		width: 100%;
+	}
+
+	.contact_field input,
+	.contact_field select,
+	.contact_field textarea {
+		min-height: 42px;
+		padding-right: 12px;
+		padding-left: 12px;
+		font-size: 12px;
+	}
+
+	.contact_field select {
+		padding-right: 32px;
+	}
+
+	.contact_phone_field .iti__tel-input {
+		padding-left: 70px;
+	}
+
+	.contact_visual {
+		position: relative;
+		top: auto;
+		right: auto;
+		bottom: auto;
+		left: auto;
+		grid-row: 3;
+		width: 100%;
+		max-width: 100%;
+		min-width: 0;
+		min-height: 300px;
+		margin: 0;
+	}
+
+	.contact_visual img {
+		width: 100%;
+		max-width: 100%;
+		height: 300px;
+		min-height: 300px;
+		object-position: 56% 52%;
+	}
+
+	.site_footer_inner {
+		grid-template-columns: 1fr;
+		gap: 0;
+		padding-top: 48px;
+		padding-bottom: 34px;
+	}
+
+	.footer_brand_block,
+	.footer_column {
+		padding: 0 0 28px;
+		margin-bottom: 28px;
+		border-bottom: 1px solid rgba(210, 168, 102, 0.34);
+	}
+
+	.footer_brand_block::after,
+	.footer_column:not(.footer_schedule)::after {
+		display: none;
+	}
+
+	.footer_disclaimer {
+		width: calc(100% - 32px);
+		padding: 22px 0 27px;
+	}
+}
