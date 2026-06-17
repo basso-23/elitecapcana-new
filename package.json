@@ -15,6 +15,7 @@
   "dependencies": {
     "@fontsource/cormorant-garamond": "^5.2.11",
     "@fontsource/manrope": "^5.2.8",
-    "astro": "^6.4.7"
+    "astro": "^6.4.7",
+    "intl-tel-input": "^29.1.0"
   }
 }

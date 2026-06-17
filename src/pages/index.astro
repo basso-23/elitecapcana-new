@@ -1,31 +1,12 @@
 ---
-import "../styles/index.css";
-import "@fontsource/cormorant-garamond/400.css";
-import "@fontsource/cormorant-garamond/500.css";
-import "@fontsource/manrope/400.css";
-import "@fontsource/manrope/500.css";
-import "@fontsource/manrope/600.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="generator" content={Astro.generator} />
-		<meta
-			name="description"
-			content="Elite Cap Cana, residencias exclusivas frente al Caribe en una de las comunidades mas prestigiosas de Republica Dominicana."
-		/>
-		<title>Elite Cap Cana | Residencias frente al Caribe</title>
-	</head>
-	<body>
-		<main class="site_shell">
+<BaseLayout>
 			<section class="hero_section" id="home" aria-label="Elite Cap Cana">
 				<img
 					class="hero_image"
-					src="/assets/hero/hero_residences_caribbean_luxury.png"
+					src="/assets/hero/hero_residences_caribbean_luxury.webp"
 					alt="Residencias de lujo frente al Caribe con piscina infinita y palmeras en Cap Cana"
 					loading="eager"
 					decoding="async"
@@ -34,39 +15,6 @@ import "@fontsource/manrope/600.css";
 				<div class="hero_overlay hero_overlay_left"></div>
 				<div class="hero_overlay hero_overlay_top"></div>
 				<div class="hero_overlay hero_overlay_bottom"></div>
-
-				<header class="site_header">
-					<nav class="site_nav" aria-label="Navegacion principal">
-						<div class="nav_group nav_group_left">
-							<a href="#residencias">Apartamentos</a>
-							<a href="#distribucion">Terrenos</a>
-							<a href="#ubicacion">Ubicación</a>
-						</div>
-
-						<a class="brand_mark" href="#home" aria-label="Elite Cap Cana inicio">
-							<svg class="brand_palm_icon" viewBox="0 0 52 52" aria-hidden="true">
-								<path d="M26 47V23" />
-								<path d="M26 23C21.7 27.4 19.6 32 19.4 37.5" />
-								<path d="M26 23C30.3 27.4 32.4 32 32.6 37.5" />
-								<path d="M26 21C18.4 20.9 12.6 23.3 8.6 28.2" />
-								<path d="M26 21C33.6 20.9 39.4 23.3 43.4 28.2" />
-								<path d="M25.8 20.2C20.1 14.8 14.2 12.9 8.2 14.6" />
-								<path d="M26.2 20.2C31.9 14.8 37.8 12.9 43.8 14.6" />
-								<path d="M26 19.2C24.1 12.9 24.7 7.9 27.8 4.1" />
-								<path d="M26 19.2C28.7 13.7 32.4 10.3 37.2 9" />
-								<path d="M26 19.2C23.3 13.7 19.6 10.3 14.8 9" />
-							</svg>
-							<span class="brand_name">Elite</span>
-							<span class="brand_place">Cap Cana</span>
-						</a>
-
-						<div class="nav_group nav_group_right">
-							<a href="#amenidades">Amenidades</a>
-							<a href="https://www.elitecapcana.com/app" target="_blank" rel="noopener noreferrer">Tour Virtual</a>
-							<a class="nav_contact" href="#contacto">Contacto</a>
-						</div>
-					</nav>
-				</header>
 
 				<div class="hero_content_wrap">
 					<div class="hero_content">
@@ -153,7 +101,7 @@ import "@fontsource/manrope/600.css";
 
 					<div class="entrance_visual" aria-hidden="true">
 						<img
-							src="/assets/section_entrada/entrada_residences_aerial.png"
+							src="/assets/section_entrada/entrada_residences_aerial.webp"
 							alt=""
 							loading="lazy"
 							decoding="async"
@@ -201,7 +149,7 @@ import "@fontsource/manrope/600.css";
 
 					<div class="location_map">
 						<img
-							src="/assets/section_ubicacion/cap_cana_map_complete.png"
+							src="/assets/section_ubicacion/cap_cana_map_complete.webp"
 							alt="Mapa ilustrado de Cap Cana con ubicación del proyecto y puntos de referencia cercanos"
 							loading="lazy"
 							decoding="async"
@@ -261,7 +209,7 @@ import "@fontsource/manrope/600.css";
 			<section class="hero_section resort_hero" id="vida-resort" aria-labelledby="vida_resort_title">
 				<img
 					class="hero_image resort_hero_image"
-					src="/assets/hero/hero_resort_golf_cap_cana.png"
+					src="/assets/hero/hero_resort_golf_cap_cana.webp"
 					alt="Residencias de lujo con terrazas frente al mar Caribe y campo de golf en Cap Cana"
 					loading="lazy"
 					decoding="async"
@@ -389,7 +337,7 @@ import "@fontsource/manrope/600.css";
 					<div class="lifestyle_gallery" aria-label="Experiencias de Cap Cana">
 						<figure class="lifestyle_photo lifestyle_photo_main">
 							<img
-								src="/assets/section_lifestyle/golf_ocean_main.png"
+								src="/assets/section_lifestyle/golf_ocean_main.webp"
 								alt="Campo de golf frente al mar Caribe en Cap Cana"
 								loading="lazy"
 								decoding="async"
@@ -397,7 +345,7 @@ import "@fontsource/manrope/600.css";
 						</figure>
 						<figure class="lifestyle_photo">
 							<img
-								src="/assets/section_lifestyle/marina_cap_cana.png"
+								src="/assets/section_lifestyle/marina_cap_cana.webp"
 								alt="Marina de lujo con yates, palmeras y faro en Cap Cana"
 								loading="lazy"
 								decoding="async"
@@ -405,7 +353,7 @@ import "@fontsource/manrope/600.css";
 						</figure>
 						<figure class="lifestyle_photo">
 							<img
-								src="/assets/section_lifestyle/white_sand_beach.png"
+								src="/assets/section_lifestyle/white_sand_beach.webp"
 								alt="Playa de arena blanca con agua turquesa y palmeras en Cap Cana"
 								loading="lazy"
 								decoding="async"
@@ -449,9 +397,9 @@ import "@fontsource/manrope/600.css";
 							<div class="residence_cards_track" data-residence-track>
 								<article class="residence_card">
 									<div class="residence_card_media">
-										<img src="/assets/section_residencias/residence_card_view.png" alt="" loading="lazy" decoding="async" />
+										<img src="/assets/section_residencias/residence_card_view.webp" alt="" loading="lazy" decoding="async" />
 									</div>
-									<img class="residence_floorplan" src="/assets/section_residencias/floorplan_tipo_a_1hab.png" alt="Plano tipo A de 1 habitacion" loading="lazy" decoding="async" />
+									<img class="residence_floorplan" src="/assets/section_residencias/floorplan_tipo_a_1hab.webp" alt="Plano tipo A de 1 habitacion" loading="lazy" decoding="async" />
 									<div class="residence_card_body">
 										<h3>Tipo A</h3>
 										<p class="residence_card_fact">
@@ -476,9 +424,9 @@ import "@fontsource/manrope/600.css";
 
 								<article class="residence_card residence_card_gold">
 									<div class="residence_card_media">
-										<img src="/assets/section_residencias/residence_card_view.png" alt="" loading="lazy" decoding="async" />
+										<img src="/assets/section_residencias/residence_card_view.webp" alt="" loading="lazy" decoding="async" />
 									</div>
-									<img class="residence_floorplan" src="/assets/section_residencias/floorplan_tipo_a_2hab.png" alt="Plano tipo A de 2 habitaciones" loading="lazy" decoding="async" />
+									<img class="residence_floorplan" src="/assets/section_residencias/floorplan_tipo_a_2hab.webp" alt="Plano tipo A de 2 habitaciones" loading="lazy" decoding="async" />
 									<div class="residence_card_body">
 										<h3>Tipo A</h3>
 										<p class="residence_card_fact">
@@ -503,9 +451,9 @@ import "@fontsource/manrope/600.css";
 
 								<article class="residence_card">
 									<div class="residence_card_media">
-										<img src="/assets/section_residencias/residence_card_view.png" alt="" loading="lazy" decoding="async" />
+										<img src="/assets/section_residencias/residence_card_view.webp" alt="" loading="lazy" decoding="async" />
 									</div>
-									<img class="residence_floorplan" src="/assets/section_residencias/floorplan_tipo_b_3hab_109.png" alt="Plano tipo B de 3 habitaciones" loading="lazy" decoding="async" />
+									<img class="residence_floorplan" src="/assets/section_residencias/floorplan_tipo_b_3hab_109.webp" alt="Plano tipo B de 3 habitaciones" loading="lazy" decoding="async" />
 									<div class="residence_card_body">
 										<h3>Tipo B</h3>
 										<p class="residence_card_fact">
@@ -530,9 +478,9 @@ import "@fontsource/manrope/600.css";
 
 								<article class="residence_card residence_card_gold">
 									<div class="residence_card_media">
-										<img src="/assets/section_residencias/residence_card_view.png" alt="" loading="lazy" decoding="async" />
+										<img src="/assets/section_residencias/residence_card_view.webp" alt="" loading="lazy" decoding="async" />
 									</div>
-									<img class="residence_floorplan" src="/assets/section_residencias/floorplan_tipo_b_3hab_68.png" alt="Plano tipo B de 3 habitaciones" loading="lazy" decoding="async" />
+									<img class="residence_floorplan" src="/assets/section_residencias/floorplan_tipo_b_3hab_68.webp" alt="Plano tipo B de 3 habitaciones" loading="lazy" decoding="async" />
 									<div class="residence_card_body">
 										<h3>Tipo B</h3>
 										<p class="residence_card_fact">
@@ -557,9 +505,9 @@ import "@fontsource/manrope/600.css";
 
 								<article class="residence_card">
 									<div class="residence_card_media">
-										<img src="/assets/section_residencias/residence_card_view.png" alt="" loading="lazy" decoding="async" />
+										<img src="/assets/section_residencias/residence_card_view.webp" alt="" loading="lazy" decoding="async" />
 									</div>
-									<img class="residence_floorplan" src="/assets/section_residencias/floorplan_tipo_b_2hab_74.png" alt="Plano tipo B de 2 habitaciones" loading="lazy" decoding="async" />
+									<img class="residence_floorplan" src="/assets/section_residencias/floorplan_tipo_b_2hab_74.webp" alt="Plano tipo B de 2 habitaciones" loading="lazy" decoding="async" />
 									<div class="residence_card_body">
 										<h3>Tipo B</h3>
 										<p class="residence_card_fact">
@@ -584,9 +532,9 @@ import "@fontsource/manrope/600.css";
 
 								<article class="residence_card residence_card_gold">
 									<div class="residence_card_media">
-										<img src="/assets/section_residencias/residence_card_view.png" alt="" loading="lazy" decoding="async" />
+										<img src="/assets/section_residencias/residence_card_view.webp" alt="" loading="lazy" decoding="async" />
 									</div>
-									<img class="residence_floorplan" src="/assets/section_residencias/floorplan_tipo_b_2hab_68.png" alt="Plano tipo B de 2 habitaciones" loading="lazy" decoding="async" />
+									<img class="residence_floorplan" src="/assets/section_residencias/floorplan_tipo_b_2hab_68.webp" alt="Plano tipo B de 2 habitaciones" loading="lazy" decoding="async" />
 									<div class="residence_card_body">
 										<h3>Tipo B</h3>
 										<p class="residence_card_fact">
@@ -611,9 +559,9 @@ import "@fontsource/manrope/600.css";
 
 								<article class="residence_card">
 									<div class="residence_card_media">
-										<img src="/assets/section_residencias/residence_card_view.png" alt="" loading="lazy" decoding="async" />
+										<img src="/assets/section_residencias/residence_card_view.webp" alt="" loading="lazy" decoding="async" />
 									</div>
-									<img class="residence_floorplan" src="/assets/section_residencias/floorplan_tipo_a_3hab.png" alt="Plano tipo A de 3 habitaciones" loading="lazy" decoding="async" />
+									<img class="residence_floorplan" src="/assets/section_residencias/floorplan_tipo_a_3hab.webp" alt="Plano tipo A de 3 habitaciones" loading="lazy" decoding="async" />
 									<div class="residence_card_body">
 										<h3>Tipo A</h3>
 										<p class="residence_card_fact">
@@ -716,7 +664,7 @@ import "@fontsource/manrope/600.css";
 
 						<figure class="floor_masterplan">
 							<img
-								src="/assets/section_residencias/distribucion_pisos_masterplan.png"
+								src="/assets/section_residencias/distribucion_pisos_masterplan.webp"
 								alt="Distribucion de edificios A y B dentro del masterplan de Elite Cap Cana"
 								loading="lazy"
 								decoding="async"
@@ -840,57 +788,331 @@ import "@fontsource/manrope/600.css";
 
 					<div class="contact_visual" aria-hidden="true">
 						<img
-							src="/assets/section_contacto/contacto_resort_sunset_right.png"
+							src="/assets/section_contacto/contacto_resort_sunset_right.webp"
 							alt=""
 							loading="lazy"
 							decoding="async"
 						/>
 					</div>
 
-					<form class="contact_form_card" aria-label="Formulario de contacto">
+					<form
+						class="contact_form_card"
+						id="leadForm"
+						method="post"
+						aria-label="Formulario de contacto"
+						data-contact-form
+						data-form="true"
+					>
 						<p class="contact_form_kicker">Formulario de contacto</p>
+						<input type="hidden" name="product" value="monday" />
+						<input type="hidden" name="boardId" value="8705548029" />
+						<div class="contact_field_grid">
+							<label class="contact_field">
+								<span>Primer nombre *</span>
+								<input type="text" name="firstName" data-form="element" placeholder="Primer nombre" autocomplete="given-name" required />
+							</label>
+							<label class="contact_field">
+								<span>Apellido *</span>
+								<input type="text" name="lastName" data-form="element" placeholder="Apellido" autocomplete="family-name" required />
+							</label>
+						</div>
 						<label class="contact_field">
-							<span>Nombre completo *</span>
-							<input type="text" name="nombre" placeholder="Escribe tu nombre" autocomplete="name" />
+							<span>E-mail *</span>
+							<input type="email" name="email" data-form="element" placeholder="ejemplo@correo.com" autocomplete="email" required />
 						</label>
-						<label class="contact_field">
-							<span>Correo electronico *</span>
-							<input type="email" name="correo" placeholder="ejemplo@correo.com" autocomplete="email" />
-						</label>
-						<label class="contact_field">
-							<span>Telefono / WhatsApp *</span>
-							<input type="tel" name="telefono" placeholder="+1 (809) 123-4567" autocomplete="tel" />
+						<label class="contact_field contact_phone_field">
+							<span>Código de país + Número de teléfono *</span>
+							<input class="contact_phone_input" type="tel" name="phone" data-form="element" placeholder="Número de teléfono" autocomplete="tel" required data-phone-input />
 						</label>
 						<div class="contact_field_grid">
 							<label class="contact_field">
-								<span>Residencia de interes *</span>
-								<select name="residencia">
-									<option selected>Selecciona una opcion</option>
-									<option>1 Dormitorio</option>
-									<option>2 Dormitorios</option>
-									<option>4 Dormitorios</option>
-									<option>Penthouse</option>
+								<span>País *</span>
+								<select id="country" name="country" data-form="element" autocomplete="country-name" required data-country-select>
+									<option value="" selected disabled>País</option>
+									<option>Afghanistan</option>
+									<option>Albania</option>
+									<option>Algeria</option>
+									<option>Andorra</option>
+									<option>Angola</option>
+									<option>Anguilla</option>
+									<option>Antigua and Barbuda</option>
+									<option>Argentina</option>
+									<option>Armenia</option>
+									<option>Aruba</option>
+									<option>Australia</option>
+									<option>Austria</option>
+									<option>Azerbaijan</option>
+									<option>Bahamas</option>
+									<option>Bahrain</option>
+									<option>Bangladesh</option>
+									<option>Barbados</option>
+									<option>Belarus</option>
+									<option>Belgium</option>
+									<option>Belize</option>
+									<option>Benin</option>
+									<option>Bermuda</option>
+									<option>Bhutan</option>
+									<option>Bolivia</option>
+									<option>Bosnia and Herzegovina</option>
+									<option>Botswana</option>
+									<option>Brazil</option>
+									<option>British Indian Ocean Territory</option>
+									<option>Brunei</option>
+									<option>Bulgaria</option>
+									<option>Burkina Faso</option>
+									<option>Burundi</option>
+									<option>Cambodia</option>
+									<option>Cameroon</option>
+									<option>Canada</option>
+									<option>Cape Verde</option>
+									<option>Cayman Islands</option>
+									<option>Central African Republic</option>
+									<option>Chad</option>
+									<option>Chile</option>
+									<option>China</option>
+									<option>Christmas Island</option>
+									<option>Cocos (Keeling) Islands</option>
+									<option>Colombia</option>
+									<option>Comoros</option>
+									<option>Congo</option>
+									<option>Cook Islands</option>
+									<option>Costa Rica</option>
+									<option>Croatia</option>
+									<option>Cuba</option>
+									<option>Cyprus</option>
+									<option>Czech Republic</option>
+									<option>Denmark</option>
+									<option>Djibouti</option>
+									<option>Dominica</option>
+									<option>Dominican Republic</option>
+									<option>Ecuador</option>
+									<option>Egypt</option>
+									<option>El Salvador</option>
+									<option>Equatorial Guinea</option>
+									<option>Eritrea</option>
+									<option>Estonia</option>
+									<option>Ethiopia</option>
+									<option>Falkland Islands</option>
+									<option>Faroe Islands</option>
+									<option>Fiji</option>
+									<option>Finland</option>
+									<option>France</option>
+									<option>French Polynesia</option>
+									<option>Gabon</option>
+									<option>Gambia</option>
+									<option>Georgia</option>
+									<option>Germany</option>
+									<option>Ghana</option>
+									<option>Gibraltar</option>
+									<option>Greece</option>
+									<option>Greenland</option>
+									<option>Grenada</option>
+									<option>Guadeloupe</option>
+									<option>Guam</option>
+									<option>Guatemala</option>
+									<option>Guernsey</option>
+									<option>Guinea</option>
+									<option>Guinea-Bissau</option>
+									<option>Guyana</option>
+									<option>Haiti</option>
+									<option>Heard Island and McDonald Islands</option>
+									<option>Honduras</option>
+									<option>Hong Kong</option>
+									<option>Hungary</option>
+									<option>Iceland</option>
+									<option>India</option>
+									<option>Indonesia</option>
+									<option>Iran</option>
+									<option>Iraq</option>
+									<option>Ireland</option>
+									<option>Isle of Man</option>
+									<option>Israel</option>
+									<option>Italy</option>
+									<option>Ivory Coast</option>
+									<option>Jamaica</option>
+									<option>Japan</option>
+									<option>Jersey</option>
+									<option>Jordan</option>
+									<option>Kazakhstan</option>
+									<option>Kenya</option>
+									<option>Kiribati</option>
+									<option>Kosovo</option>
+									<option>Kuwait</option>
+									<option>Kyrgyzstan</option>
+									<option>Laos</option>
+									<option>Latvia</option>
+									<option>Lebanon</option>
+									<option>Lesotho</option>
+									<option>Liberia</option>
+									<option>Libya</option>
+									<option>Liechtenstein</option>
+									<option>Lithuania</option>
+									<option>Luxembourg</option>
+									<option>Macau</option>
+									<option>Macedonia</option>
+									<option>Madagascar</option>
+									<option>Malawi</option>
+									<option>Malaysia</option>
+									<option>Maldives</option>
+									<option>Mali</option>
+									<option>Malta</option>
+									<option>Marshall Islands</option>
+									<option>Martinique</option>
+									<option>Mauritania</option>
+									<option>Mauritius</option>
+									<option>Mayotte</option>
+									<option>Mexico</option>
+									<option>Moldova</option>
+									<option>Monaco</option>
+									<option>Mongolia</option>
+									<option>Montenegro</option>
+									<option>Montserrat</option>
+									<option>Morocco</option>
+									<option>Mozambique</option>
+									<option>Myanmar</option>
+									<option>Namibia</option>
+									<option>Nauru</option>
+									<option>Nepal</option>
+									<option>Netherlands</option>
+									<option>New Caledonia</option>
+									<option>New Zealand</option>
+									<option>Nicaragua</option>
+									<option>Niger</option>
+									<option>Nigeria</option>
+									<option>Niue</option>
+									<option>Norfolk Island</option>
+									<option>North Korea</option>
+									<option>Northern Mariana Islands</option>
+									<option>Norway</option>
+									<option>Oman</option>
+									<option>Pakistan</option>
+									<option>Palau</option>
+									<option>Panama</option>
+									<option>Papua New Guinea</option>
+									<option>Paraguay</option>
+									<option>Peru</option>
+									<option>Philippines</option>
+									<option>Pitcairn</option>
+									<option>Poland</option>
+									<option>Portugal</option>
+									<option>Puerto Rico</option>
+									<option>Qatar</option>
+									<option>Romania</option>
+									<option>Russia</option>
+									<option>Rwanda</option>
+									<option>Réunion</option>
+									<option>Saint Kitts and Nevis</option>
+									<option>Saint Lucia</option>
+									<option>Saint Pierre and Miquelon</option>
+									<option>Saint Vincent and the Grenadines</option>
+									<option>Samoa</option>
+									<option>San Marino</option>
+									<option>Sao Tome and Principe</option>
+									<option>Saudi Arabia</option>
+									<option>Senegal</option>
+									<option>Serbia</option>
+									<option>Seychelles</option>
+									<option>Sierra Leone</option>
+									<option>Singapore</option>
+									<option>Slovakia</option>
+									<option>Slovenia</option>
+									<option>Solomon Islands</option>
+									<option>Somalia</option>
+									<option>South Africa</option>
+									<option>South Georgia and the South Sandwich Islands</option>
+									<option>South Korea</option>
+									<option>Spain</option>
+									<option>Sri Lanka</option>
+									<option>Sudan</option>
+									<option>Suriname</option>
+									<option>Swaziland</option>
+									<option>Sweden</option>
+									<option>Switzerland</option>
+									<option>Syria</option>
+									<option>Taiwan</option>
+									<option>Tanzania</option>
+									<option>Thailand</option>
+									<option>Timor-Leste</option>
+									<option>Togo</option>
+									<option>Tokelau</option>
+									<option>Tonga</option>
+									<option>Trinidad and Tobago</option>
+									<option>Tunisia</option>
+									<option>Turkey</option>
+									<option>Turkmenistan</option>
+									<option>Turks and Caicos Islands</option>
+									<option>Uganda</option>
+									<option>Ukraine</option>
+									<option>United Arab Emirates</option>
+									<option>United Kingdom</option>
+									<option>United States</option>
+									<option>Uruguay</option>
+									<option>Uzbekistan</option>
+									<option>Vanuatu</option>
+									<option>Vatican City State (Holy See)</option>
+									<option>Venezuela</option>
+									<option>Vietnam</option>
+									<option>Wallis and Futuna</option>
+									<option>Yemen</option>
+									<option>Zambia</option>
+									<option>Zimbabwe</option>
 								</select>
 							</label>
 							<label class="contact_field">
-								<span>Rango de capital disponible *</span>
-								<select name="capital">
-									<option selected>Selecciona una opcion</option>
-									<option>US$60k-80k</option>
-									<option>US$80k-150k</option>
-									<option>US$150k-300k</option>
-									<option>Mas de US$300k</option>
+								<span>Ciudad *</span>
+								<select id="city" name="city" data-form="element" autocomplete="address-level2" required data-city-select>
+									<option value="" selected disabled>Ciudad</option>
+								</select>
+							</label>
+						</div>
+						<div class="contact_field_grid">
+							<label class="contact_field">
+								<span>Tipo de residencia</span>
+								<select id="propertyType" name="propertyType" data-form="element">
+									<option value="" selected>Selecciona una opción</option>
+									<option value="1 BEDROOM">1 Dormitorio</option>
+									<option value="2 BEDROOM">2 Dormitorios</option>
+									<option value="3 BEDROOM">3 Dormitorios</option>
+									<option value="4 BEDROOM">4 Dormitorios</option>
+								</select>
+							</label>
+							<label class="contact_field">
+								<span>Capital disponible *</span>
+								<select name="capital_available" data-form="element" required>
+									<option value="" selected disabled>Selecciona una opción</option>
+									<option>US$60k–80k</option>
+									<option>US$80k–150k</option>
+									<option>US$150k–300k</option>
+									<option>Más de US$300k</option>
 									<option>Estoy evaluando opciones de financiamiento</option>
 								</select>
 							</label>
 						</div>
 						<label class="contact_field">
-							<span>Mensaje (opcional)</span>
-							<textarea name="mensaje" rows="2" placeholder="Cuentanos como te podemos ayudar..."></textarea>
+							<span>¿Cómo te enteraste de nosotros? *</span>
+							<select id="howHear" name="howHear" data-form="element" required>
+								<option value="" selected disabled>Selecciona una opción</option>
+								<option value="website">Sitio web</option>
+								<option value="News articles">Artículos de noticias</option>
+								<option value="Third choice">Tercera opción</option>
+								<option value="Friends/Family">Amigos/familia</option>
+								<option value="Social media">Redes sociales</option>
+								<option value="Agent">Agente inmobiliario</option>
+								<option value="E-blast">Correo electrónico</option>
+								<option value="Print advertising">Publicidad impresa</option>
+								<option value="Digital advertising">Publicidad digital</option>
+							</select>
 						</label>
-						<button class="contact_submit" type="button">
-							<span>Solicitar informacion</span>
-				
+						<label class="contact_checkbox">
+							<input type="checkbox" name="broker" value="Si" data-form="element" />
+							<span>¿Eres agente inmobiliario? <strong>Sí</strong></span>
+						</label>
+						<label class="contact_checkbox">
+							<input type="checkbox" name="termsCondition" value="accepted" data-form="element" required />
+							<span>Acepto tratamiento de datos</span>
+						</label>
+						<button class="contact_submit" type="submit" data-button="submit" data-redirect-url="/gracias">
+							<span>Enviar</span>
 						</button>
 						<p class="contact_privacy">
 							<svg viewBox="0 0 24 24" aria-hidden="true">
@@ -904,102 +1126,17 @@ import "@fontsource/manrope/600.css";
 				</div>
 			</section>
 
-			<footer class="site_footer" aria-labelledby="footer_brand">
-				<div class="site_footer_inner">
-					<div class="footer_brand_block">
-						<a class="brand_mark footer_brand" href="/" aria-label="Elite Cap Cana inicio" id="footer_brand">
-							<svg class="brand_palm_icon" viewBox="0 0 52 52" aria-hidden="true">
-								<path d="M26 47V23" />
-								<path d="M26 23C21.7 27.4 19.6 32 19.4 37.5" />
-								<path d="M26 23C30.3 27.4 32.4 32 32.6 37.5" />
-								<path d="M26 21C18.4 20.9 12.6 23.3 8.6 28.2" />
-								<path d="M26 21C33.6 20.9 39.4 23.3 43.4 28.2" />
-								<path d="M25.8 20.2C20.1 14.8 14.2 12.9 8.2 14.6" />
-								<path d="M26.2 20.2C31.9 14.8 37.8 12.9 43.8 14.6" />
-								<path d="M26 19.2C24.1 12.9 24.7 7.9 27.8 4.1" />
-								<path d="M26 19.2C28.7 13.7 32.4 10.3 37.2 9" />
-								<path d="M26 19.2C23.3 13.7 19.6 10.3 14.8 9" />
-							</svg>
-							<span class="brand_name">Elite</span>
-							<span class="brand_place">Cap Cana</span>
-						</a>
-						<p>
-							Un exclusivo desarrollo residencial en el corazon de Cap Cana, disenado para quienes
-							buscan elevar su estilo de vida frente al Caribe.
-						</p>
-						<div class="footer_socials" aria-label="Redes sociales">
-							<a href="#contacto" aria-label="Instagram">
-								<svg viewBox="0 0 24 24" aria-hidden="true">
-									<rect x="4" y="4" width="16" height="16" rx="5" />
-									<circle cx="12" cy="12" r="3.6" />
-									<path d="M16.9 7.2h.1" />
-								</svg>
-							</a>
-							<a href="#contacto" aria-label="Facebook">
-								<svg viewBox="0 0 24 24" aria-hidden="true">
-									<path d="M14.5 8H13c-1.1 0-1.8.8-1.8 2v2H9v3h2.2v5H14v-5h2.2l.5-3H14v-1.5c0-.5.2-.8.8-.8h1.8V8h-2.1Z" />
-								</svg>
-							</a>
-							<a href="#contacto" aria-label="YouTube">
-								<svg viewBox="0 0 24 24" aria-hidden="true">
-									<rect x="4" y="7" width="16" height="10" rx="3" />
-									<path d="m10.5 10 4 2-4 2v-4Z" />
-								</svg>
-							</a>
-						</div>
-					</div>
-
-					<nav class="footer_column" aria-label="Informacion">
-						<h2>Informacion</h2>
-						<a href="#residencias">Apartamentos</a>
-						<a href="#amenidades">Amenidades</a>
-						<a href="#ubicacion">Ubicacion</a>
-						<a href="#distribucion">Galeria</a>
-						<a href="#vida-resort">Tour Virtual</a>
-					</nav>
-
-					<div class="footer_column footer_contact">
-						<h2>Contacto</h2>
-						<a href="tel:+18095550101">
-							<svg viewBox="0 0 24 24" aria-hidden="true">
-								<path d="M8.6 5.2 10.4 9l-2 1.4c1.1 2.3 2.9 4.1 5.2 5.2l1.4-2 3.8 1.8c.6.3.9.9.7 1.5l-.7 2c-.2.6-.8 1-1.5 1C10 19.5 4.5 14 4.1 6.7c0-.7.4-1.3 1-1.5l2-.7c.6-.2 1.2.1 1.5.7Z" />
-							</svg>
-							<span>+1 (809) 555-0101</span>
-						</a>
-						<a href="mailto:info@elitecapcana.com">
-							<svg viewBox="0 0 24 24" aria-hidden="true">
-								<path d="M4 6h16v12H4z" />
-								<path d="m4 7 8 6 8-6" />
-							</svg>
-							<span>info@elitecapcana.com</span>
-						</a>
-						<p>
-							<svg viewBox="0 0 24 24" aria-hidden="true">
-								<path d="M12 21s7-5.4 7-11a7 7 0 0 0-14 0c0 5.6 7 11 7 11Z" />
-								<circle cx="12" cy="10" r="2.5" />
-							</svg>
-							<span>Cap Cana, Punta Cana<br />Republica Dominicana</span>
-						</p>
-					</div>
-
-					<div class="footer_column footer_schedule">
-						<h2>Horario de atencion</h2>
-						<p>Lunes a Viernes<br /><span>9:00 a.m. - 6:00 p.m.</span></p>
-						<p>Sabados<br /><span>10:00 a.m. - 2:00 p.m.</span></p>
-					</div>
-				</div>
-				<p class="footer_disclaimer">
-					Todos los renders se muestran unicamente con fines ilustrativos y estan sujetos a cambios
-				</p>
-			</footer>
 			<div class="residence_modal" data-residence-modal role="dialog" aria-modal="true" aria-hidden="true">
 				<button class="residence_modal_close" type="button" data-residence-modal-close aria-label="Cerrar plano">
 					<span aria-hidden="true"></span>
 				</button>
 				<img class="residence_modal_image" src="" alt="" data-residence-modal-image />
 			</div>
-		</main>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/sanserna/owly-webflow@2.0.0/dist/owly-webflow.umd.min.js"></script>
 		<script>
+			import intlTelInput from "intl-tel-input/intlTelInputWithUtils";
+
 			const setupResidenceCarousels = () => {
 				document.querySelectorAll("[data-residence-carousel]").forEach((carousel) => {
 					const track = carousel.querySelector("[data-residence-track]");
@@ -1107,9 +1244,91 @@ import "@fontsource/manrope/600.css";
 				});
 			};
 
+			const setupContactForm = () => {
+				const form = document.querySelector("[data-contact-form]");
+				const phoneInput = document.querySelector("[data-phone-input]");
+				if (!form || !phoneInput) return;
+
+				const phone = intlTelInput(phoneInput, {
+					initialCountry: "do",
+					separateDialCode: true,
+					nationalMode: true,
+				});
+
+				const updatePhoneValue = () => {
+					const internationalPhone = phone.getNumber();
+					if (internationalPhone) phoneInput.value = internationalPhone;
+				};
+
+				form.addEventListener("submit", (event) => {
+					updatePhoneValue();
+
+					if (!form.checkValidity()) {
+						event.preventDefault();
+						form.reportValidity();
+					}
+				});
+			};
+
+			const setupCountryCityFields = () => {
+				const countrySelect = document.querySelector("[data-country-select]");
+				const citySelect = document.querySelector("[data-city-select]");
+				if (!countrySelect || !citySelect) return;
+
+				let countriesData = [];
+
+				const setCityOptions = (cities = []) => {
+					citySelect.innerHTML = "";
+					citySelect.add(new Option("Ciudad", ""));
+					cities.forEach((city) => citySelect.add(new Option(city, city)));
+				};
+
+				fetch("https://countriesnow.space/api/v0.1/countries")
+					.then((response) => response.json())
+					.then((data) => {
+						countriesData = Array.isArray(data.data) ? data.data : [];
+					})
+					.catch((error) => {
+						console.error("Error cargando ciudades:", error);
+					});
+
+				countrySelect.addEventListener("change", () => {
+					const country = countriesData.find((item) => item.country === countrySelect.value);
+					setCityOptions(country?.cities || []);
+				});
+			};
+
+			const setupLeadFormIntegration = () => {
+				const form = document.querySelector("#leadForm");
+				const submitButton = form?.querySelector("[data-button='submit']");
+				if (!form || !submitButton) return;
+
+				const owlyWebflow = (window as typeof window & {
+					owlyWebflow?: { initForm?: (selector: string) => void };
+				}).owlyWebflow;
+
+				if (owlyWebflow?.initForm) {
+					owlyWebflow.initForm("#leadForm");
+				}
+
+				form.addEventListener("submit", () => {
+					if (!form.checkValidity()) return;
+
+					const redirectUrl = submitButton.getAttribute("data-redirect-url");
+					if (redirectUrl) {
+						window.setTimeout(() => {
+							window.location.href = redirectUrl;
+						}, 2000);
+					}
+				});
+			};
+
 			const setupPageInteractions = () => {
 				setupResidenceCarousels();
 				setupResidenceModal();
+				setupContactForm();
+				setupCountryCityFields();
+				setupLeadFormIntegration();
 			};
 
 			if (document.readyState === "loading") {
@@ -1118,5 +1337,4 @@ import "@fontsource/manrope/600.css";
 				setupPageInteractions();
 			}
 		</script>
-	</body>
-</html>
+</BaseLayout>
