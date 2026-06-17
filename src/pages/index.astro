@@ -244,6 +244,48 @@ import "@fontsource/manrope/600.css";
 					</div>
 				</div>
 			</section>
+
+			<section class="hero_section resort_hero" id="vida-resort" aria-labelledby="vida_resort_title">
+				<img
+					class="hero_image resort_hero_image"
+					src="/assets/hero/hero_resort_golf_cap_cana.png"
+					alt="Residencias de lujo con terrazas frente al mar Caribe y campo de golf en Cap Cana"
+					loading="lazy"
+					decoding="async"
+				/>
+				<div class="hero_overlay resort_hero_overlay_left"></div>
+				<div class="hero_overlay resort_hero_overlay_top"></div>
+				<div class="hero_overlay resort_hero_overlay_bottom"></div>
+
+				<div class="hero_content_wrap resort_hero_content_wrap">
+					<div class="hero_content resort_hero_content">
+						<h1 id="vida_resort_title">Vida resort en una dirección privilegiada</h1>
+						<span class="resort_hero_rule" aria-hidden="true"></span>
+						<p class="resort_hero_text">
+							Un estilo de vida que combina naturaleza, sofisticación y bienestar en el corazón
+							de Cap Cana.
+						</p>
+
+						<a class="primary_cta resort_hero_cta" href="#contacto">
+							<span>Solicita información</span>
+							<span class="cta_arrow" aria-hidden="true"></span>
+						</a>
+
+						<div class="resort_hero_meta" aria-label="Datos principales de residencias">
+							<svg class="location_place_icon resort_hero_meta_icon" viewBox="0 0 44 44" aria-hidden="true">
+								<path d="M11 37V13l11-5 11 5v24" />
+								<path d="M16 37V19h12v18" />
+								<path d="M18 24h2M24 24h2M18 29h2M24 29h2" />
+								<path d="M8 37h28" />
+							</svg>
+							<p>
+								<strong>113 RESIDENCIAS EXCLUSIVAS</strong>
+								<span>1, 2 y 4 habitaciones</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 	</body>
 </html>
@@ -326,6 +368,111 @@ import "@fontsource/manrope/600.css";
 		background:
 			linear-gradient(0deg, rgba(0, 18, 20, 0.78) 0%, rgba(0, 18, 20, 0.26) 20%, transparent 44%),
 			radial-gradient(circle at 64% 76%, rgba(210, 168, 102, 0.12), transparent 22%);
+	}
+
+	.resort_hero {
+		min-height: 720px;
+		max-height: 820px;
+		background: #032b31;
+	}
+
+	.resort_hero_image {
+		object-position: 58% 50%;
+		filter: saturate(0.92) contrast(1.04) brightness(0.78);
+	}
+
+	.resort_hero_overlay_left {
+		z-index: -3;
+	
+	}
+
+	.resort_hero_overlay_top {
+		z-index: -2;
+		background: linear-gradient(180deg, rgba(0, 22, 25, 0.34) 0%, transparent 42%);
+	}
+
+	.resort_hero_overlay_bottom {
+		z-index: -1;
+		background: linear-gradient(0deg, rgba(0, 17, 19, 0.72) 0%, rgba(0, 17, 19, 0.18) 31%, transparent 54%);
+	}
+
+	.resort_hero_content_wrap {
+		align-items: center;
+		padding: 92px 32px 68px;
+	}
+
+	.resort_hero_content {
+		width: min(100%, 415px);
+		margin-top: -14px;
+	}
+
+	.resort_hero_content h1 {
+		max-width: 390px;
+		font-size: clamp(3.7rem, 5.4vw, 4.95rem);
+		font-weight: 400;
+		line-height: 0.94;
+	}
+
+	.resort_hero_rule {
+		display: block;
+		width: 36px;
+		height: 2px;
+		margin: 23px 0 24px;
+		background: var(--color_gold);
+	}
+
+	.resort_hero_text {
+		max-width: 326px;
+		margin: 0;
+		color: rgba(255, 249, 239, 0.9);
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1.65;
+		text-shadow: 0 2px 18px rgba(0, 0, 0, 0.3);
+	}
+
+	.resort_hero_cta {
+		width: min(100%, 252px);
+		min-height: 50px;
+		margin-top: 27px;
+		padding: 0 24px;
+		border-width: 1px;
+		background: rgba(2, 55, 59, 0.4);
+		font-size: 14px;
+	}
+
+	.resort_hero_meta {
+		display: flex;
+		align-items: center;
+		gap: 17px;
+		margin-top: 125px;
+		color: rgba(255, 249, 239, 0.92);
+	}
+
+	.resort_hero_meta_icon {
+		width: 42px;
+		height: 42px;
+		flex: 0 0 auto;
+	}
+
+	.resort_hero_meta p {
+		margin: 0;
+		font-size: 11px;
+		font-weight: 500;
+		line-height: 1.45;
+		text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+	}
+
+	.resort_hero_meta strong,
+	.resort_hero_meta span {
+		display: block;
+	}
+
+	.resort_hero_meta strong {
+		color: rgba(255, 249, 239, 0.9);
+		font-size: 10px;
+		font-weight: 600;
+		letter-spacing: 0.09em;
 	}
 
 	.site_header {
@@ -826,7 +973,7 @@ import "@fontsource/manrope/600.css";
 		display: block;
 		width: 100%;
 		aspect-ratio: 1 / 1;
-		object-fit: cover;
+		object-fit: contain;
 		border-radius: 9px;
 	}
 
@@ -899,6 +1046,19 @@ import "@fontsource/manrope/600.css";
 		.hero_content h1 {
 			max-width: 470px;
 			font-size: clamp(3.5rem, 6.4vw, 4.2rem);
+		}
+
+		.resort_hero_image {
+			object-position: 62% 50%;
+		}
+
+		.resort_hero_content h1 {
+			max-width: 365px;
+			font-size: clamp(3.45rem, 6vw, 4.15rem);
+		}
+
+		.resort_hero_meta {
+			margin-top: 112px;
 		}
 
 		.entrance_inner {
@@ -991,6 +1151,42 @@ import "@fontsource/manrope/600.css";
 
 		.hero_content h1 {
 			font-size: clamp(3.35rem, 11vw, 4.15rem);
+		}
+
+		.resort_hero {
+			min-height: 690px;
+		}
+
+		.resort_hero_image {
+			object-position: 72% 50%;
+			filter: saturate(0.9) contrast(1.04) brightness(0.7);
+		}
+
+		.resort_hero_overlay_left {
+			
+		}
+
+		.resort_hero_content_wrap {
+			align-items: flex-start;
+			padding: 86px 24px 60px;
+		}
+
+		.resort_hero_content {
+			width: min(100%, 390px);
+			margin-top: 0;
+		}
+
+		.resort_hero_content h1 {
+			max-width: 360px;
+			font-size: clamp(3.1rem, 10vw, 3.85rem);
+		}
+
+		.resort_hero_text {
+			max-width: 310px;
+		}
+
+		.resort_hero_meta {
+			margin-top: 118px;
 		}
 
 		.hero_kicker {
@@ -1102,6 +1298,59 @@ import "@fontsource/manrope/600.css";
 			max-width: 350px;
 			font-size: clamp(3rem, 15vw, 3.85rem);
 			line-height: 0.94;
+		}
+
+		.resort_hero {
+			min-height: 650px;
+		}
+
+		.resort_hero_image {
+			object-position: 76% 50%;
+		}
+
+		.resort_hero_content_wrap {
+			padding: 74px 18px 50px;
+		}
+
+		.resort_hero_content h1 {
+			max-width: 315px;
+			font-size: clamp(2.9rem, 13vw, 3.45rem);
+		}
+
+		.resort_hero_rule {
+			margin: 20px 0 21px;
+		}
+
+		.resort_hero_text {
+			max-width: 290px;
+			font-size: 12px;
+			line-height: 1.62;
+		}
+
+		.resort_hero_cta {
+			width: min(100%, 245px);
+			min-height: 49px;
+			margin-top: 24px;
+			font-size: 13px;
+		}
+
+		.resort_hero_meta {
+			gap: 14px;
+			margin-top: 86px;
+		}
+
+		.resort_hero_meta_icon {
+			width: 37px;
+			height: 37px;
+		}
+
+		.resort_hero_meta p {
+			font-size: 10px;
+		}
+
+		.resort_hero_meta strong {
+			font-size: 9px;
+			letter-spacing: 0.08em;
 		}
 
 		.hero_kicker {
