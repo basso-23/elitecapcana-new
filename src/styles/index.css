@@ -664,6 +664,62 @@ a {
 	text-transform: uppercase;
 }
 
+.location_actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-top: 48px;
+}
+
+.location_map_button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	min-height: 42px;
+	padding: 0 17px;
+	border: 1px solid rgba(210, 168, 102, 0.86);
+	background: rgba(0, 29, 34, 0.2);
+	color: #fff9ef;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	line-height: 1;
+	text-transform: uppercase;
+	transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.location_map_button:hover {
+	border-color: var(--color_gold_soft);
+	background: rgba(210, 168, 102, 0.12);
+	color: var(--color_gold_soft);
+	transform: translateY(-1px);
+}
+
+.location_map_button:active {
+	transform: translateY(1px);
+}
+
+.location_map_button svg,
+.location_map_button img {
+	width: 18px;
+	height: 18px;
+	flex: 0 0 auto;
+}
+
+.location_map_button svg {
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.75;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.location_map_button img {
+	display: block;
+	object-fit: contain;
+}
+
 .location_map {
 	width: min(100%, 430px);
 	margin: 0 auto;
@@ -811,9 +867,9 @@ a {
 .lifestyle_features {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr);
-	gap: 24px;
-	width: min(100%, 262px);
-	margin-top: 58px;
+	gap: 17px;
+	width: min(100%, 292px);
+	margin-top: 42px;
 }
 
 .lifestyle_feature {
@@ -841,7 +897,7 @@ a {
 	align-items: center;
 	gap: 22px;
 	width: max-content;
-	margin-top: 10rem;
+	margin-top: 70px;
 	border-bottom: 0;
 	color: var(--color_gold);
 }
@@ -2783,9 +2839,18 @@ a {
 		max-width: 330px;
 	}
 
+	.location_actions {
+		margin-top: 30px;
+	}
+
 	.location_text_link {
 		margin-top: 26px;
 		font-size: 11px;
+	}
+
+	.location_map_button {
+		width: 100%;
+		min-height: 44px;
 	}
 
 	.location_map {

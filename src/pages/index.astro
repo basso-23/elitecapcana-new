@@ -38,7 +38,7 @@ import "@fontsource/manrope/600.css";
 				<header class="site_header">
 					<nav class="site_nav" aria-label="Navegacion principal">
 						<div class="nav_group nav_group_left">
-							<a href="#residencias">Residencias</a>
+							<a href="#residencias">Apartamentos</a>
 							<a href="#distribucion">Terrenos</a>
 							<a href="#ubicacion">Ubicación</a>
 						</div>
@@ -184,7 +184,19 @@ import "@fontsource/manrope/600.css";
 							En el corazón de Cap Cana, rodeado de experiencias únicas y servicios
 							de clase mundial.
 						</p>
-						<a class="location_text_link" href="#contacto">Conectado con lo extraordinario</a>
+						<div class="location_actions" aria-label="Abrir ubicacion en mapas">
+							<a class="location_map_button" href="https://maps.app.goo.gl/KHo49GD7U2qZGhoG7" target="_blank" rel="noopener noreferrer">
+								<svg viewBox="0 0 24 24" aria-hidden="true">
+									<path d="M12 21s7-5.4 7-11a7 7 0 0 0-14 0c0 5.6 7 11 7 11Z" />
+									<circle cx="12" cy="10" r="2.6" />
+								</svg>
+								<span>Google Maps</span>
+							</a>
+							<a class="location_map_button" href="https://www.waze.com/es-419/live-map/directions?navigate=yes&amp;utm_campaign=default&amp;utm_source=waze_website&amp;utm_medium=lm_share_location&amp;to=ll.18.46839516%2C-68.41725111" target="_blank" rel="noopener noreferrer">
+								<img src="/assets/icons/waze.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+								<span>Waze</span>
+							</a>
+						</div>
 					</div>
 
 					<div class="location_map">
@@ -319,7 +331,25 @@ import "@fontsource/manrope/600.css";
 									<path d="M9 38h12" />
 									<path d="M28 34c4 0 7-1.8 7-4s-3-4-7-4-7 1.8-7 4 3 4 7 4Z" />
 								</svg>
-								<span>Punta Espada<br />Golf Course</span>
+								<span>Punta Espada Golf Course</span>
+							</div>
+							<div class="lifestyle_feature">
+								<svg class="location_place_icon" viewBox="0 0 44 44" aria-hidden="true">
+									<path d="M8 28c4-4.5 8-4.5 12 0s8 4.5 12 0 6-4.5 8-2.2" />
+									<path d="M8 35c4-4.5 8-4.5 12 0s8 4.5 12 0 6-4.5 8-2.2" />
+									<path d="M13 38V9" />
+									<path d="M13 10h18l-4 6 4 6H13" />
+								</svg>
+								<span>Las Iguanas Golf</span>
+							</div>
+							<div class="lifestyle_feature">
+								<svg class="location_place_icon" viewBox="0 0 44 44" aria-hidden="true">
+									<path d="M9 35h26" />
+									<path d="M13 35V17l9-7 9 7v18" />
+									<path d="M18 35V23h8v12" />
+									<path d="M14 17h16" />
+								</svg>
+								<span>Los Establos</span>
 							</div>
 							<div class="lifestyle_feature">
 								<svg class="location_place_icon" viewBox="0 0 44 44" aria-hidden="true">
@@ -328,7 +358,16 @@ import "@fontsource/manrope/600.css";
 									<path d="M22 10c-3.8 3.4-5.8 7.3-6 11.8" />
 									<path d="M22 10c3.8 3.4 5.8 7.3 6 11.8" />
 								</svg>
-								<span>Playas turquesa<br />y arena blanca</span>
+								<span>Playa Juanillo</span>
+							</div>
+							<div class="lifestyle_feature">
+								<svg class="location_place_icon" viewBox="0 0 44 44" aria-hidden="true">
+									<path d="M11 36V13l11-6 11 6v23" />
+									<path d="M16 36V20h12v16" />
+									<path d="M18 25h2M24 25h2M18 30h2M24 30h2" />
+									<path d="M8 36h28" />
+								</svg>
+								<span>Cap Cana Heritage School</span>
 							</div>
 							<div class="lifestyle_feature">
 								<svg class="location_place_icon" viewBox="0 0 44 44" aria-hidden="true">
@@ -337,15 +376,7 @@ import "@fontsource/manrope/600.css";
 									<path d="M23 12c5.4 4.8 8.5 10.8 9.2 18H23" />
 									<path d="M10 37c4-2.8 8-2.8 12 0s8 2.8 12 0" />
 								</svg>
-								<span>Marina Cap Cana,<br />de clase mundial</span>
-							</div>
-							<div class="lifestyle_feature">
-								<svg class="location_place_icon" viewBox="0 0 44 44" aria-hidden="true">
-									<path d="M12 17h20l-2 21H14l-2-21Z" />
-									<path d="M17 17c0-4 2-7 5-7s5 3 5 7" />
-									<path d="M17 24h10" />
-								</svg>
-								<span>Lifestyle boutique<br />y gastronomia</span>
+								<span>La Marina At Cap Cana</span>
 							</div>
 						</div>
 
@@ -941,7 +972,7 @@ import "@fontsource/manrope/600.css";
 
 					<nav class="footer_column" aria-label="Informacion">
 						<h2>Informacion</h2>
-						<a href="#residencias">Residencias</a>
+						<a href="#residencias">Apartamentos</a>
 						<a href="#amenidades">Amenidades</a>
 						<a href="#ubicacion">Ubicacion</a>
 						<a href="#distribucion">Galeria</a>
