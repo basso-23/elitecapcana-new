@@ -160,6 +160,90 @@ import "@fontsource/manrope/600.css";
 					</div>
 				</div>
 			</section>
+
+			<section class="location_section" id="ubicacion" aria-labelledby="ubicacion_title">
+				<div class="location_inner">
+					<div class="entrance_copy location_copy">
+						<svg class="entrance_palm_icon" viewBox="0 0 52 52" aria-hidden="true">
+							<path d="M26 47V23" />
+							<path d="M26 23C21.7 27.4 19.6 32 19.4 37.5" />
+							<path d="M26 23C30.3 27.4 32.4 32 32.6 37.5" />
+							<path d="M26 21C18.4 20.9 12.6 23.3 8.6 28.2" />
+							<path d="M26 21C33.6 20.9 39.4 23.3 43.4 28.2" />
+							<path d="M25.8 20.2C20.1 14.8 14.2 12.9 8.2 14.6" />
+							<path d="M26.2 20.2C31.9 14.8 37.8 12.9 43.8 14.6" />
+							<path d="M26 19.2C24.1 12.9 24.7 7.9 27.8 4.1" />
+							<path d="M26 19.2C28.7 13.7 32.4 10.3 37.2 9" />
+							<path d="M26 19.2C23.3 13.7 19.6 10.3 14.8 9" />
+						</svg>
+
+						<h2 id="ubicacion_title">Ubicación<br />privilegiada</h2>
+						<span class="entrance_rule" aria-hidden="true"></span>
+						<p>
+							En el corazón de Cap Cana, rodeado de experiencias únicas y servicios
+							de clase mundial.
+						</p>
+						<a class="location_text_link" href="#contacto">Conectado con lo extraordinario</a>
+					</div>
+
+					<div class="location_map">
+						<img
+							src="/assets/section_ubicacion/cap_cana_map_complete.png"
+							alt="Mapa ilustrado de Cap Cana con ubicación del proyecto y puntos de referencia cercanos"
+							loading="lazy"
+							decoding="async"
+						/>
+					</div>
+
+					<div class="location_places" aria-label="Puntos de interes cercanos">
+						<div class="location_place">
+							<svg class="location_place_icon" viewBox="0 0 44 44" aria-hidden="true">
+								<path d="M22 25V9" />
+								<path d="M22 11C17 12 13.5 14.6 11.5 18.8" />
+								<path d="M22 11C27 12 30.5 14.6 32.5 18.8" />
+								<path d="M21.8 10.8C18.4 6.8 14.8 5.6 11 7.1" />
+								<path d="M22.2 10.8C25.6 6.8 29.2 5.6 33 7.1" />
+								<path d="M8 32c3.8-3.6 7.5-3.6 11.3 0s7.5 3.6 11.2 0 5.3-3.6 6.5-2.2" />
+								<path d="M8 38c3.8-3.6 7.5-3.6 11.3 0s7.5 3.6 11.2 0 5.3-3.6 6.5-2.2" />
+							</svg>
+							<p><span>Playa Juanillo</span><strong>5 min.</strong></p>
+						</div>
+						<div class="location_place">
+							<svg class="location_place_icon" viewBox="0 0 44 44" aria-hidden="true">
+								<path d="M13 38V9" />
+								<path d="M13 10h18l-4 6 4 6H13" />
+								<path d="M9 38h12" />
+								<path d="M28 34c4 0 7-1.8 7-4s-3-4-7-4-7 1.8-7 4 3 4 7 4Z" />
+							</svg>
+							<p><span>Punta Espada Golf Club</span><strong>5 min.</strong></p>
+						</div>
+						<div class="location_place">
+							<svg class="location_place_icon" viewBox="0 0 44 44" aria-hidden="true">
+								<path d="M22 7v25" />
+								<path d="M22 9c-5.8 6.5-8.8 13.7-9 21h9" />
+								<path d="M23 12c5.4 4.8 8.5 10.8 9.2 18H23" />
+								<path d="M10 37c4-2.8 8-2.8 12 0s8 2.8 12 0" />
+							</svg>
+							<p><span>Marina Cap Cana</span><strong>7 min.</strong></p>
+						</div>
+						<div class="location_place">
+							<svg class="location_place_icon" viewBox="0 0 44 44" aria-hidden="true">
+								<path d="M31.5 7.5C20 8.5 12.3 16.3 10 31c11.7-.7 19.3-8.4 21.5-23.5Z" />
+								<path d="M11 31c5.5-7.2 11.7-12.3 18.6-15.4" />
+								<path d="M17 24c1.3 4.7 3.8 8 7.5 10" />
+							</svg>
+							<p><span>Scape Park</span><strong>10 min.</strong></p>
+						</div>
+						<div class="location_place">
+							<svg class="location_place_icon" viewBox="0 0 44 44" aria-hidden="true">
+								<path d="M6 26l32-14-11 25-6-11-11 5-4-5Z" />
+								<path d="M21 26l17-14" />
+							</svg>
+							<p><span>Aeropuerto Int. Punta Cana</span><strong>12 min.</strong></p>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 	</body>
 </html>
@@ -662,6 +746,141 @@ import "@fontsource/manrope/600.css";
 		filter: saturate(0.94) contrast(1.02) brightness(1.02);
 	}
 
+	.location_section {
+		position: relative;
+		overflow: hidden;
+		background:
+			radial-gradient(circle at 27% 48%, rgba(210, 168, 102, 0.08), transparent 23%),
+			radial-gradient(circle at 68% 45%, rgba(0, 87, 88, 0.36), transparent 34%),
+			linear-gradient(120deg, #062f31 0%, #073638 46%, #052b2e 100%);
+		color: var(--color_ivory);
+	}
+
+	.location_section::before {
+		position: absolute;
+		inset: 0;
+		content: "";
+		background:
+			linear-gradient(90deg, rgba(0, 15, 18, 0.22), transparent 30%, rgba(0, 15, 18, 0.2)),
+			radial-gradient(circle at 50% 50%, rgba(248, 243, 234, 0.05), transparent 38%);
+		pointer-events: none;
+	}
+
+	.location_inner {
+		position: relative;
+		z-index: 1;
+		display: grid;
+		grid-template-columns: minmax(240px, 0.86fr) minmax(380px, 1.25fr) minmax(230px, 0.78fr);
+		gap: 38px;
+		align-items: center;
+		width: min(100%, var(--site_max_width));
+		min-height: 526px;
+		margin: 0 auto;
+		padding: 62px 32px 70px;
+	}
+
+	.location_copy {
+		max-width: 332px;
+	}
+
+	.location_section .entrance_palm_icon {
+		stroke: var(--color_gold);
+	}
+
+	.location_section .entrance_copy h2 {
+		max-width: 330px;
+		color: var(--color_ivory);
+	}
+
+	.location_section .entrance_rule {
+		margin-top: 24px;
+		margin-bottom: 24px;
+		background: var(--color_gold);
+	}
+
+	.location_section .entrance_copy p {
+		max-width: 318px;
+		color: rgba(248, 243, 234, 0.86);
+	}
+
+	.location_text_link {
+		display: inline-block;
+		margin-top: 30px;
+		padding-bottom: 3px;
+		border-bottom: 1px solid rgba(210, 168, 102, 0.88);
+		color: var(--color_gold);
+		font-size: 12px;
+		font-weight: 500;
+		letter-spacing: 0.08em;
+		line-height: 1.2;
+		text-transform: uppercase;
+	}
+
+	.location_map {
+		width: min(100%, 430px);
+		margin: 0 auto;
+		filter: drop-shadow(0 22px 42px rgba(0, 10, 12, 0.28));
+	}
+
+	.location_map img {
+		display: block;
+		width: 100%;
+		aspect-ratio: 1 / 1;
+		object-fit: cover;
+		border-radius: 9px;
+	}
+
+	.location_places {
+		display: grid;
+		align-content: center;
+		width: min(100%, 265px);
+		margin-left: auto;
+	}
+
+	.location_place {
+		display: grid;
+		grid-template-columns: 42px minmax(0, 1fr);
+		gap: 18px;
+		align-items: center;
+		padding: 0 0 20px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid rgba(210, 168, 102, 0.36);
+	}
+
+	.location_place:last-child {
+		margin-bottom: 0;
+	}
+
+	.location_place_icon {
+		width: 38px;
+		height: 38px;
+		overflow: visible;
+		fill: none;
+		stroke: var(--color_gold);
+		stroke-width: 1.55;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+
+	.location_place p {
+		margin: 0;
+		color: rgba(248, 243, 234, 0.9);
+		font-size: 13px;
+		font-weight: 500;
+		line-height: 1.35;
+	}
+
+	.location_place span,
+	.location_place strong {
+		display: block;
+	}
+
+	.location_place strong {
+		margin-top: 2px;
+		color: var(--color_gold);
+		font-weight: 500;
+	}
+
 	@media (max-width: 1180px) {
 		.nav_group {
 			gap: 20px;
@@ -689,6 +908,15 @@ import "@fontsource/manrope/600.css";
 		.entrance_visual {
 			right: 0;
 			width: 58vw;
+		}
+
+		.location_inner {
+			grid-template-columns: minmax(220px, 0.8fr) minmax(340px, 1.2fr) minmax(220px, 0.82fr);
+			gap: 28px;
+		}
+
+		.location_map {
+			width: min(100%, 398px);
 		}
 	}
 
@@ -800,6 +1028,34 @@ import "@fontsource/manrope/600.css";
 			width: calc(100% + 96px);
 			height: 390px;
 			margin: 48px -72px 0 48px;
+		}
+
+		.location_inner {
+			grid-template-columns: minmax(0, 1fr) minmax(280px, 0.9fr);
+			gap: 42px 32px;
+			min-height: 0;
+			padding: 64px 24px 68px;
+		}
+
+		.location_copy {
+			max-width: 430px;
+		}
+
+		.location_section .entrance_copy h2,
+		.location_section .entrance_copy p {
+			max-width: 430px;
+		}
+
+		.location_map {
+			width: min(100%, 430px);
+		}
+
+		.location_places {
+			grid-column: 1 / -1;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 0 28px;
+			width: 100%;
+			margin: 0;
 		}
 	}
 
@@ -929,6 +1185,51 @@ import "@fontsource/manrope/600.css";
 			width: calc(100% + 54px);
 			height: 305px;
 			margin: 36px -36px 0 18px;
+		}
+
+		.location_inner {
+			display: block;
+			padding: 54px 18px 58px;
+		}
+
+		.location_copy {
+			max-width: 100%;
+		}
+
+		.location_section .entrance_copy h2 {
+			max-width: 310px;
+		}
+
+		.location_section .entrance_copy p {
+			max-width: 330px;
+		}
+
+		.location_text_link {
+			margin-top: 26px;
+			font-size: 11px;
+		}
+
+		.location_map {
+			width: 100%;
+			margin-top: 42px;
+		}
+
+		.location_places {
+			display: block;
+			width: 100%;
+			margin-top: 40px;
+		}
+
+		.location_place {
+			grid-template-columns: 40px minmax(0, 1fr);
+			gap: 16px;
+			padding-bottom: 18px;
+			margin-bottom: 18px;
+		}
+
+		.location_place_icon {
+			width: 35px;
+			height: 35px;
 		}
 	}
 </style>
