@@ -92,6 +92,74 @@ import "@fontsource/manrope/600.css";
 					<span class="scroll_line"></span>
 				</a>
 			</section>
+
+			<section class="entrance_section" id="entrada" aria-labelledby="entrada_title">
+				<div class="entrance_inner">
+					<div class="entrance_copy">
+						<svg class="entrance_palm_icon" viewBox="0 0 52 52" aria-hidden="true">
+							<path d="M26 47V23" />
+							<path d="M26 23C21.7 27.4 19.6 32 19.4 37.5" />
+							<path d="M26 23C30.3 27.4 32.4 32 32.6 37.5" />
+							<path d="M26 21C18.4 20.9 12.6 23.3 8.6 28.2" />
+							<path d="M26 21C33.6 20.9 39.4 23.3 43.4 28.2" />
+							<path d="M25.8 20.2C20.1 14.8 14.2 12.9 8.2 14.6" />
+							<path d="M26.2 20.2C31.9 14.8 37.8 12.9 43.8 14.6" />
+							<path d="M26 19.2C24.1 12.9 24.7 7.9 27.8 4.1" />
+							<path d="M26 19.2C28.7 13.7 32.4 10.3 37.2 9" />
+							<path d="M26 19.2C23.3 13.7 19.6 10.3 14.8 9" />
+						</svg>
+
+						<h2 id="entrada_title">Entrada elegante<br />a una vida de lujo</h2>
+						<span class="entrance_rule" aria-hidden="true"></span>
+						<p>
+							Elite Cap Cana es un proyecto residencial exclusivo dentro de la comunidad mas
+							prestigiosa del Caribe. Disenado para quienes buscan elevar su estilo de vida
+							y hacer una inversion con vision de futuro.
+						</p>
+
+						<div class="entrance_stats" aria-label="Datos principales del proyecto">
+							<div class="entrance_stat">
+								<svg class="stat_icon" viewBox="0 0 44 44" aria-hidden="true">
+									<path d="M11 37V13l11-5 11 5v24" />
+									<path d="M16 37V19h12v18" />
+									<path d="M18 24h2M24 24h2M18 29h2M24 29h2" />
+									<path d="M8 37h28" />
+								</svg>
+								<strong>113</strong>
+								<span>Residencias<br />exclusivas</span>
+							</div>
+							<div class="entrance_stat">
+								<svg class="stat_icon" viewBox="0 0 44 44" aria-hidden="true">
+									<path d="M9 31V17" />
+									<path d="M9 23h26c3 0 5 2 5 5v3" />
+									<path d="M9 31h31" />
+									<path d="M14 23v-6h9c3 0 5 2 5 5v1" />
+									<path d="M13 35v-4M38 35v-4" />
+								</svg>
+								<strong>1, 2 y 4</strong>
+								<span>Habitaciones</span>
+							</div>
+							<div class="entrance_stat">
+								<svg class="stat_icon" viewBox="0 0 44 44" aria-hidden="true">
+									<path d="M6 23c4-5 8-5 12 0s8 5 12 0 6-5 8-3" />
+									<path d="M6 31c4-5 8-5 12 0s8 5 12 0 6-5 8-3" />
+								</svg>
+								<span>Vistas al mar</span>
+								<span>y Farallón</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="entrance_visual" aria-hidden="true">
+						<img
+							src="/assets/section_entrada/entrada_residences_aerial.png"
+							alt=""
+							loading="lazy"
+							decoding="async"
+						/>
+					</div>
+				</div>
+			</section>
 		</main>
 	</body>
 </html>
@@ -450,6 +518,150 @@ import "@fontsource/manrope/600.css";
 		transform: rotate(45deg);
 	}
 
+	.entrance_section {
+		position: relative;
+		overflow: hidden;
+		background:
+			radial-gradient(circle at 9% 14%, rgba(210, 168, 102, 0.1), transparent 18%),
+			linear-gradient(90deg, #f9f4eb 0%, #fbf7ef 47%, #f6efe3 100%);
+		color: var(--color_deep_teal);
+	}
+
+	.entrance_inner {
+		position: relative;
+		display: grid;
+		grid-template-columns: minmax(340px, 0.43fr) minmax(0, 0.57fr);
+		align-items: center;
+		width: min(100%, var(--site_max_width));
+		min-height: 594px;
+		margin: 0 auto;
+		padding: 70px 32px 74px;
+	}
+
+	.entrance_copy {
+		position: relative;
+		z-index: 2;
+		max-width: 440px;
+		font-weight: 500;
+	}
+
+	.entrance_palm_icon {
+		width: 40px;
+		height: 40px;
+		overflow: visible;
+		fill: none;
+		stroke: var(--color_gold);
+		stroke-width: 1.45;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+
+	.entrance_copy h2 {
+		max-width: 650px;
+		margin: 0;
+		font-family: var(--font_display);
+		font-size: clamp(3.55rem, 5.2vw, 4rem);
+		font-weight: 500;
+		letter-spacing: -0.02em;
+		line-height: 1.1;
+		color: #07343a;
+		text-wrap: balance;
+	}
+
+	.entrance_rule {
+		display: block;
+		width: 55px;
+		height: 2px;
+		margin: 24px 0 24px;
+		background: var(--color_gold);
+	}
+
+	.entrance_copy p {
+		max-width: 400px;
+		margin: 0;
+		color: rgba(7, 52, 58, 0.8);
+		font-size: 15px;
+		font-weight: 500;
+		line-height: 1.72;
+	}
+
+	.entrance_stats {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		width: min(100%, 422px);
+		margin-top: 54px;
+	}
+
+	.entrance_stat {
+		min-height: 124px;
+		padding: 0 23px;
+		border-left: 1px solid rgba(7, 52, 58, 0.22);
+		color: #07343a;
+		text-align: center;
+	}
+
+	.entrance_stat:first-child {
+		padding-left: 0;
+		border-left: 0;
+	}
+
+	.stat_icon {
+		display: block;
+		width: 45px;
+		height: 45px;
+		margin: 0 auto 13px;
+		fill: none;
+		stroke: #796640;
+		stroke-width: 1.45;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+
+	.entrance_stat strong {
+		display: block;
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 1.15;
+		color: #07343a;
+	}
+
+	.entrance_stat span {
+		display: block;
+		margin-top: 8px;
+		color: rgba(7, 52, 58, 0.82);
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1.25;
+	}
+
+	.entrance_visual {
+		position: absolute;
+		top: -1px;
+		right: calc((100vw - min(100vw, var(--site_max_width))) / -2);
+		bottom: 0;
+		width: calc(57vw + max(0px, (100vw - var(--site_max_width)) / 2));
+		border-left: 1px solid rgba(210, 168, 102, 0.52);
+		overflow: hidden;
+		max-width: 50vw;
+	}
+
+	.entrance_visual::before {
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		content: "";
+		background: linear-gradient(90deg, rgba(251, 247, 239, 0.16), transparent 22%);
+		pointer-events: none;
+	}
+
+	.entrance_visual img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 52% 50%;
+		filter: saturate(0.94) contrast(1.02) brightness(1.02);
+	}
+
 	@media (max-width: 1180px) {
 		.nav_group {
 			gap: 20px;
@@ -468,6 +680,15 @@ import "@fontsource/manrope/600.css";
 		.hero_content h1 {
 			max-width: 470px;
 			font-size: clamp(3.5rem, 6.4vw, 4.2rem);
+		}
+
+		.entrance_inner {
+			grid-template-columns: minmax(320px, 0.45fr) minmax(0, 0.55fr);
+		}
+
+		.entrance_visual {
+			right: 0;
+			width: 58vw;
 		}
 	}
 
@@ -552,6 +773,34 @@ import "@fontsource/manrope/600.css";
 		.hero_hint {
 			display: none;
 		}
+
+		.entrance_inner {
+			display: block;
+			min-height: 0;
+			padding: 62px 24px 0;
+		}
+
+		.entrance_copy {
+			max-width: 560px;
+			margin: 0 auto;
+		}
+
+		.entrance_copy h2 {
+			font-size: clamp(3rem, 10vw, 4rem);
+		}
+
+		.entrance_stats {
+			margin-top: 38px;
+		}
+
+		.entrance_visual {
+			position: relative;
+			right: auto;
+			bottom: auto;
+			width: calc(100% + 96px);
+			height: 390px;
+			margin: 48px -72px 0 48px;
+		}
 	}
 
 	@media (max-width: 560px) {
@@ -620,6 +869,66 @@ import "@fontsource/manrope/600.css";
 		.scroll_cue {
 			bottom: 18px;
 			transform: translateX(-50%) scale(0.88);
+		}
+
+		.entrance_inner {
+			padding: 52px 18px 0;
+		}
+
+		.entrance_palm_icon {
+			width: 35px;
+			height: 35px;
+		}
+
+		.entrance_copy h2 {
+			font-size: clamp(2.8rem, 13vw, 3.55rem);
+		}
+
+		.entrance_copy p {
+			font-size: 14px;
+			line-height: 1.68;
+		}
+
+		.entrance_stats {
+			grid-template-columns: 1fr;
+			gap: 0;
+			margin-top: 34px;
+		}
+
+		.entrance_stat,
+		.entrance_stat:first-child {
+			display: grid;
+			justify-items: center;
+			min-height: 0;
+			padding: 17px 0;
+			border-left: 0;
+			border-top: 1px solid rgba(7, 52, 58, 0.18);
+			text-align: center;
+		}
+
+		.entrance_stat:first-child {
+			border-top: 0;
+		}
+
+		.stat_icon {
+			width: 45px;
+			height: 45px;
+			margin: 0 0 10px;
+		}
+
+		.entrance_stat strong {
+			font-size: 18px;
+		}
+
+		.entrance_stat span {
+			margin-top: 5px;
+			font-size: 18px;
+		}
+
+		.entrance_visual {
+			width: calc(100% + 54px);
+			height: 305px;
+			margin: 36px -36px 0 18px;
 		}
 	}
 </style>
