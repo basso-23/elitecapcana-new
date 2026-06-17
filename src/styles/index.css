@@ -1106,6 +1106,11 @@ a {
 	stroke-width: 2;
 }
 
+.residence_card_fact .area_icon {
+	fill: currentColor;
+	stroke: none;
+}
+
 .residence_card_body a {
 	display: inline-flex;
 	align-items: center;
@@ -1120,6 +1125,90 @@ a {
 	font-size: 15px;
 	font-weight: 500;
 	line-height: 1;
+}
+
+.body_modal_locked {
+	overflow: hidden;
+}
+
+.residence_modal {
+	position: fixed;
+	inset: 0;
+	z-index: 100;
+	display: grid;
+	place-items: center;
+	padding: 64px 34px 34px;
+	background: rgba(0, 12, 14, 0.9);
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
+	transition: opacity 180ms ease, visibility 180ms ease;
+}
+
+.residence_modal_open {
+	opacity: 1;
+	pointer-events: auto;
+	visibility: visible;
+}
+
+.residence_modal_image {
+	display: block;
+	width: auto;
+	max-width: min(96vw, var(--site_max_width));
+	max-height: 90vh;
+	object-fit: contain;
+	background: #fff;
+	box-shadow: 0 30px 70px rgba(0, 0, 0, 0.46);
+}
+
+.residence_modal_close {
+	position: fixed;
+	top: 26px;
+	right: 28px;
+	z-index: 101;
+	display: grid;
+	width: 48px;
+	height: 48px;
+	place-items: center;
+	border: 1px solid rgba(210, 168, 102, 0.72);
+	border-radius: 999px;
+	background: rgba(0, 29, 34, 0.54);
+	color: #fff9ef;
+	cursor: pointer;
+	transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.residence_modal_close:hover {
+	border-color: var(--color_gold_soft);
+	background: rgba(210, 168, 102, 0.13);
+	color: var(--color_gold_soft);
+	transform: translateY(-1px);
+}
+
+.residence_modal_close span {
+	position: relative;
+	display: block;
+	width: 19px;
+	height: 19px;
+}
+
+.residence_modal_close span::before,
+.residence_modal_close span::after {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 1.5px;
+	content: "";
+	background: currentColor;
+}
+
+.residence_modal_close span::before {
+	transform: rotate(45deg);
+}
+
+.residence_modal_close span::after {
+	transform: rotate(-45deg);
 }
 
 .residence_carousel_controls {
@@ -2997,6 +3086,22 @@ a {
 		min-width: 118px;
 		min-height: 46px;
 		font-size: 14px;
+	}
+
+	.residence_modal {
+		padding: 64px 14px 18px;
+	}
+
+	.residence_modal_image {
+		max-width: calc(100vw - 28px);
+		max-height: 84vh;
+	}
+
+	.residence_modal_close {
+		top: 14px;
+		right: 14px;
+		width: 42px;
+		height: 42px;
 	}
 
 	.residence_benefits {
