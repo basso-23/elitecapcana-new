@@ -453,7 +453,35 @@ a {
 	content: "";
 	border-radius: 999px;
 	background: rgba(255, 250, 240, 0.9);
-	transform: translateX(-50%);
+	animation: scroll_mouse_hint 1.55s ease-in-out infinite;
+	transform: translate(-50%, 0);
+}
+
+@keyframes scroll_mouse_hint {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, 0);
+	}
+
+	20% {
+		opacity: 1;
+	}
+
+	72% {
+		opacity: 1;
+		transform: translate(-50%, 12px);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translate(-50%, 12px);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.scroll_mouse::after {
+		
+	}
 }
 
 .scroll_line {
