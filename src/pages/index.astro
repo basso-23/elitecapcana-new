@@ -286,6 +286,103 @@ import "@fontsource/manrope/600.css";
 					</div>
 				</div>
 			</section>
+
+			<section class="location_section lifestyle_section" id="amenidades" aria-labelledby="lifestyle_title">
+				<div class="lifestyle_inner">
+					<div class="entrance_copy location_copy lifestyle_copy">
+						<svg class="entrance_palm_icon" viewBox="0 0 52 52" aria-hidden="true">
+							<path d="M26 47V23" />
+							<path d="M26 23C21.7 27.4 19.6 32 19.4 37.5" />
+							<path d="M26 23C30.3 27.4 32.4 32 32.6 37.5" />
+							<path d="M26 21C18.4 20.9 12.6 23.3 8.6 28.2" />
+							<path d="M26 21C33.6 20.9 39.4 23.3 43.4 28.2" />
+							<path d="M25.8 20.2C20.1 14.8 14.2 12.9 8.2 14.6" />
+							<path d="M26.2 20.2C31.9 14.8 37.8 12.9 43.8 14.6" />
+							<path d="M26 19.2C24.1 12.9 24.7 7.9 27.8 4.1" />
+							<path d="M26 19.2C28.7 13.7 32.4 10.3 37.2 9" />
+							<path d="M26 19.2C23.3 13.7 19.6 10.3 14.8 9" />
+						</svg>
+
+						<h2 id="lifestyle_title">Golf, playa y<br />marina a minutos</h2>
+						<span class="entrance_rule" aria-hidden="true"></span>
+						<p>
+							Vive rodeado de experiencias unicas. Desde campos de golf de clase mundial
+							hasta playas de arena blanca y una marina de primer nivel.
+						</p>
+
+						<div class="lifestyle_features" aria-label="Amenidades y experiencias cercanas">
+							<div class="lifestyle_feature">
+								<svg class="location_place_icon" viewBox="0 0 44 44" aria-hidden="true">
+									<path d="M13 38V9" />
+									<path d="M13 10h18l-4 6 4 6H13" />
+									<path d="M9 38h12" />
+									<path d="M28 34c4 0 7-1.8 7-4s-3-4-7-4-7 1.8-7 4 3 4 7 4Z" />
+								</svg>
+								<span>Punta Espada<br />Golf Course</span>
+							</div>
+							<div class="lifestyle_feature">
+								<svg class="location_place_icon" viewBox="0 0 44 44" aria-hidden="true">
+									<path d="M8 28c4-4.5 8-4.5 12 0s8 4.5 12 0 6-4.5 8-2.2" />
+									<path d="M8 35c4-4.5 8-4.5 12 0s8 4.5 12 0 6-4.5 8-2.2" />
+									<path d="M22 10c-3.8 3.4-5.8 7.3-6 11.8" />
+									<path d="M22 10c3.8 3.4 5.8 7.3 6 11.8" />
+								</svg>
+								<span>Playas turquesa<br />y arena blanca</span>
+							</div>
+							<div class="lifestyle_feature">
+								<svg class="location_place_icon" viewBox="0 0 44 44" aria-hidden="true">
+									<path d="M22 7v25" />
+									<path d="M22 9c-5.8 6.5-8.8 13.7-9 21h9" />
+									<path d="M23 12c5.4 4.8 8.5 10.8 9.2 18H23" />
+									<path d="M10 37c4-2.8 8-2.8 12 0s8 2.8 12 0" />
+								</svg>
+								<span>Marina Cap Cana,<br />de clase mundial</span>
+							</div>
+							<div class="lifestyle_feature">
+								<svg class="location_place_icon" viewBox="0 0 44 44" aria-hidden="true">
+									<path d="M12 17h20l-2 21H14l-2-21Z" />
+									<path d="M17 17c0-4 2-7 5-7s5 3 5 7" />
+									<path d="M17 24h10" />
+								</svg>
+								<span>Lifestyle boutique<br />y gastronomia</span>
+							</div>
+						</div>
+
+						<a class="location_text_link lifestyle_text_link" href="#contacto">
+							<span>Descubre Cap Cana</span>
+							<span class="lifestyle_link_arrow" aria-hidden="true"></span>
+						</a>
+					</div>
+
+					<div class="lifestyle_gallery" aria-label="Experiencias de Cap Cana">
+						<figure class="lifestyle_photo lifestyle_photo_main">
+							<img
+								src="/assets/section_lifestyle/golf_ocean_main.png"
+								alt="Campo de golf frente al mar Caribe en Cap Cana"
+								loading="lazy"
+								decoding="async"
+							/>
+						</figure>
+						<figure class="lifestyle_photo">
+							<img
+								src="/assets/section_lifestyle/marina_cap_cana.png"
+								alt="Marina de lujo con yates, palmeras y faro en Cap Cana"
+								loading="lazy"
+								decoding="async"
+							/>
+						</figure>
+						<figure class="lifestyle_photo">
+							<img
+								src="/assets/section_lifestyle/white_sand_beach.png"
+								alt="Playa de arena blanca con agua turquesa y palmeras en Cap Cana"
+								loading="lazy"
+								decoding="async"
+							/>
+						</figure>
+					</div>
+
+				</div>
+			</section>
 		</main>
 	</body>
 </html>
@@ -907,9 +1004,7 @@ import "@fontsource/manrope/600.css";
 		position: absolute;
 		inset: 0;
 		content: "";
-		background:
-			linear-gradient(90deg, rgba(0, 15, 18, 0.22), transparent 30%, rgba(0, 15, 18, 0.2)),
-			radial-gradient(circle at 50% 50%, rgba(248, 243, 234, 0.05), transparent 38%);
+
 		pointer-events: none;
 	}
 
@@ -952,7 +1047,7 @@ import "@fontsource/manrope/600.css";
 
 	.location_text_link {
 		display: inline-block;
-		margin-top: 30px;
+		margin-top: 5rem;
 		padding-bottom: 3px;
 		border-bottom: 1px solid rgba(210, 168, 102, 0.88);
 		color: var(--color_gold);
@@ -1028,6 +1123,143 @@ import "@fontsource/manrope/600.css";
 		font-weight: 500;
 	}
 
+	.lifestyle_section {
+		    background: #012828;
+	}
+
+	.lifestyle_inner {
+		position: relative;
+		z-index: 1;
+		display: grid;
+		grid-template-columns: minmax(250px, 0.33fr) minmax(0, 0.67fr);
+		gap: 48px;
+		align-items: stretch;
+		width: min(100%, var(--site_max_width));
+		min-height: 735px;
+		margin: 0 auto;
+		padding: 60px 38px 68px;
+	}
+
+	.lifestyle_copy {
+		display: flex;
+		flex-direction: column;
+		align-self: stretch;
+		max-width: none;
+		padding-top: 34px;
+		padding-bottom: 12px;
+	}
+
+	.lifestyle_copy .entrance_palm_icon {
+		display: none;
+	}
+
+	.lifestyle_section .lifestyle_copy h2 {
+		max-width: 375px;
+		font-size: clamp(2.85rem, 4vw, 3.55rem);
+		line-height: 1.03;
+	}
+
+	.lifestyle_section .lifestyle_copy p {
+		max-width: 255px;
+		font-size: 14px;
+		line-height: 1.58;
+	}
+
+	.lifestyle_gallery {
+		max-height: 785px;
+		padding-left: 5rem;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-template-rows: minmax(362px, 1.12fr) minmax(288px, 0.88fr);
+		gap: 12px;
+		align-self: stretch;
+		width: calc(100% + max(0px, (100vw - var(--site_max_width)) / 2) + 38px);
+		min-height: 662px;
+	}
+
+	.lifestyle_photo {
+		position: relative;
+		min-width: 0;
+		margin: 0;
+		overflow: hidden;
+		background: rgba(248, 243, 234, 0.08);
+		box-shadow: 0 22px 48px rgba(0, 12, 14, 0.18);
+	}
+
+	.lifestyle_photo_main {
+		grid-column: 1 / -1;
+	}
+
+	.lifestyle_photo img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		filter: saturate(0.92) contrast(1.03) brightness(0.94);
+	}
+
+	.lifestyle_photo_main img {
+		object-position: 48% 50%;
+	}
+
+	.lifestyle_features {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		gap: 24px;
+		width: min(100%, 262px);
+		margin-top: 58px;
+	}
+
+	.lifestyle_feature {
+		display: grid;
+		grid-template-columns: 45px minmax(0, 1fr);
+		gap: 17px;
+		align-items: center;
+		min-height: 45px;
+		color: rgba(248, 243, 234, 0.9);
+		font-size: 13px;
+		font-weight: 500;
+		letter-spacing: 0;
+		line-height: 1.35;
+		text-transform: none;
+	}
+
+	.lifestyle_feature .location_place_icon {
+		width: 38px;
+		height: 38px;
+		stroke-width: 1.45;
+	}
+
+	.lifestyle_text_link {
+		display: inline-flex;
+		align-items: center;
+		gap: 22px;
+		width: max-content;
+		margin-top: 10rem;
+		border-bottom: 0;
+		color: var(--color_gold);
+	}
+
+	.lifestyle_link_arrow {
+		position: relative;
+		display: inline-block;
+		width: 20px;
+		height: 1px;
+		background: currentColor;
+	}
+
+	.lifestyle_link_arrow::after {
+		position: absolute;
+		top: -4px;
+		right: 0;
+		width: 8px;
+		height: 8px;
+		content: "";
+		border-top: 1px solid currentColor;
+		border-right: 1px solid currentColor;
+		transform: rotate(45deg);
+	}
+
 	@media (max-width: 1180px) {
 		.nav_group {
 			gap: 20px;
@@ -1077,6 +1309,21 @@ import "@fontsource/manrope/600.css";
 
 		.location_map {
 			width: min(100%, 398px);
+		}
+
+		.lifestyle_inner {
+			grid-template-columns: minmax(235px, 0.34fr) minmax(0, 0.66fr);
+			gap: 36px;
+			padding-inline: 32px;
+		}
+
+		.lifestyle_gallery {
+			grid-template-rows: minmax(326px, 1.08fr) minmax(248px, 0.92fr);
+			min-height: 586px;
+		}
+
+		.lifestyle_features {
+			margin-top: 46px;
 		}
 	}
 
@@ -1252,6 +1499,43 @@ import "@fontsource/manrope/600.css";
 			gap: 0 28px;
 			width: 100%;
 			margin: 0;
+		}
+
+		.lifestyle_inner {
+			grid-template-columns: minmax(0, 1fr);
+			gap: 40px;
+			min-height: 0;
+			padding: 66px 24px 70px;
+		}
+
+		.lifestyle_copy {
+			align-self: auto;
+			max-width: 100%;
+			padding: 0;
+		}
+
+		.lifestyle_gallery {
+			width: 100%;
+			grid-template-rows: minmax(300px, 1.2fr) minmax(190px, 0.8fr);
+			min-height: 506px;
+		}
+
+		.lifestyle_features {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 20px 28px;
+			width: min(100%, 560px);
+			margin-top: 38px;
+		}
+
+		.lifestyle_feature {
+			grid-template-columns: 42px minmax(0, 1fr);
+			justify-items: start;
+			gap: 14px;
+			text-align: left;
+		}
+
+		.lifestyle_text_link {
+			margin-top: 42px;
 		}
 	}
 
@@ -1479,6 +1763,55 @@ import "@fontsource/manrope/600.css";
 		.location_place_icon {
 			width: 35px;
 			height: 35px;
+		}
+
+		.lifestyle_inner {
+			display: block;
+			padding: 54px 18px 58px;
+		}
+
+		.lifestyle_section .lifestyle_copy h2 {
+			max-width: 330px;
+			font-size: clamp(2.75rem, 12vw, 3.35rem);
+		}
+
+		.lifestyle_section .lifestyle_copy p {
+			max-width: 330px;
+		}
+
+		.lifestyle_gallery {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 285px 202px 202px;
+			gap: 12px;
+			min-height: 0;
+			margin-top: 38px;
+		}
+
+		.lifestyle_photo_main {
+			grid-column: auto;
+		}
+
+		.lifestyle_features {
+			grid-template-columns: 1fr;
+			gap: 20px;
+			width: 100%;
+			margin-top: 36px;
+		}
+
+		.lifestyle_feature {
+			grid-template-columns: 40px minmax(0, 1fr);
+			font-size: 12px;
+		}
+
+		.lifestyle_feature .location_place_icon {
+			width: 36px;
+			height: 36px;
+		}
+
+		.lifestyle_text_link {
+			margin-top: 38px;
+			font-size: 10px;
 		}
 	}
 </style>
