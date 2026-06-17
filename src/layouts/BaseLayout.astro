@@ -13,12 +13,18 @@ interface Props {
 	title?: string;
 	description?: string;
 	robots?: string;
+	image?: string;
+	url?: string;
+	type?: string;
 }
 
 const {
 	title = "Elite Cap Cana | Residencias frente al Caribe",
-	description = "Elite Cap Cana, residencias exclusivas frente al Caribe en una de las comunidades más prestigiosas de República Dominicana.",
+	description = "Residencias exclusivas en Cap Cana, República Dominicana, diseñadas para vivir o invertir frente al Caribe con amenidades premium y ubicación privilegiada.",
 	robots,
+	image = "https://i.imgur.com/moi8N7x.png",
+	url = "https://www.elitecapcana.com/",
+	type = "website",
 } = Astro.props;
 ---
 
@@ -32,6 +38,18 @@ const {
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
 		{robots && <meta name="robots" content={robots} />}
+		<link rel="canonical" href={url} />
+		<meta property="og:type" content={type} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={image} />
+		<meta property="og:url" content={url} />
+		<meta property="og:site_name" content="Elite Cap Cana" />
+		<meta property="og:locale" content="es_DO" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={image} />
 		<title>{title}</title>
 	</head>
 	<body>

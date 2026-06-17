@@ -36,26 +36,177 @@ a {
 }
 
 .thanks_page {
+	position: relative;
+	isolation: isolate;
 	display: grid;
 	min-height: 100dvh;
-	place-items: center;
-	padding: 32px;
+	overflow: hidden;
 	background: var(--color_teal_black);
 	color: var(--color_ivory);
 }
 
-.thanks_page h1 {
+.thanks_page_image {
+	position: absolute;
+	inset: 0;
+	z-index: -4;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 58% 50%;
+	filter: saturate(0.9) contrast(1.05) brightness(0.72);
+}
+
+.thanks_page_overlay {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+}
+
+.thanks_page_overlay_left {
+	z-index: -3;
+	background:
+		linear-gradient(90deg, rgba(0, 22, 26, 0.96) 0%, rgba(0, 31, 35, 0.82) 34%, rgba(0, 31, 35, 0.36) 62%, rgba(0, 31, 35, 0.08) 100%),
+		radial-gradient(circle at 21% 49%, rgba(210, 168, 102, 0.16), transparent 28%);
+}
+
+.thanks_page_overlay_bottom {
+	z-index: -2;
+	background:
+		linear-gradient(180deg, rgba(0, 18, 22, 0.68) 0%, transparent 28%),
+		linear-gradient(0deg, rgba(0, 18, 22, 0.86) 0%, rgba(0, 18, 22, 0.12) 38%, transparent 64%);
+}
+
+.thanks_page_inner {
+	position: relative;
+	z-index: 1;
+	display: grid;
+	grid-template-columns: minmax(0, 575px);
+	align-items: center;
+	width: min(100%, var(--site_max_width));
+	min-height: 100dvh;
+	margin: 0 auto;
+
+}
+
+.thanks_page_content {
+	width: min(100%, 575px);
+	margin-top: 5rem;
+}
+
+.thanks_kicker {
 	margin: 0;
 	color: var(--color_gold_soft);
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.thanks_page h1 {
+	max-width: 535px;
+	margin: 17px 0 0;
+	color: #fffaf0;
 	font-family: var(--font_display);
-	font-size: 96px;
+	font-size: clamp(4rem, 6.2vw, 5.55rem);
 	font-weight: 500;
-	line-height: 0.95;
+	letter-spacing: -0.02em;
+	line-height: 0.94;
+	text-wrap: balance;
+	text-shadow: 0 3px 28px rgba(0, 0, 0, 0.32);
+}
+
+.thanks_rule {
+	display: block;
+	width: 56px;
+	height: 2px;
+	margin: 27px 0 25px;
+	background: var(--color_gold);
+}
+
+.thanks_message {
+	max-width: 455px;
+	margin: 0;
+	color: rgba(248, 243, 234, 0.9);
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 1.72;
+	text-shadow: 0 2px 18px rgba(0, 0, 0, 0.28);
+}
+
+.thanks_actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 22px;
+	margin-top: 34px;
+}
+
+.thanks_primary_cta {
+	width: min(100%, 256px);
+	min-height: 58px;
+}
+
+@media (max-width: 1024px) {
+	.thanks_page_image {
+		object-position: 62% 50%;
+		filter: saturate(0.88) contrast(1.04) brightness(0.62);
+	}
+
+	.thanks_page_overlay_left {
+		background:
+			linear-gradient(90deg, rgba(0, 22, 26, 0.96) 0%, rgba(0, 31, 35, 0.82) 46%, rgba(0, 31, 35, 0.2) 100%),
+			linear-gradient(0deg, rgba(0, 18, 22, 0.84) 0%, transparent 42%);
+	}
+
+	.thanks_page_inner {
+		grid-template-columns: 1fr;
+		width: 100%;
+		padding: 72px 16px;
+	}
+
+	.thanks_page_content {
+		width: 100%;
+		max-width: 590px;
+	}
+
+	.thanks_page h1 {
+		max-width: 500px;
+		font-size: clamp(3.05rem, 12vw, 4.2rem);
+		line-height: 0.98;
+	}
+
+	.thanks_message {
+		max-width: 480px;
+		font-size: 13px;
+		line-height: 1.62;
+	}
+
 }
 
 @media (max-width: 560px) {
-	.thanks_page h1 {
-		font-size: 58px;
+	.thanks_page_image {
+		object-position: 72% 50%;
+	}
+
+	.thanks_page_overlay_left {
+		background:
+			linear-gradient(90deg, rgba(0, 22, 26, 0.92) 0%, rgba(0, 31, 35, 0.7) 100%),
+			linear-gradient(0deg, rgba(0, 18, 22, 0.9) 0%, rgba(0, 18, 22, 0.4) 58%, transparent 100%);
+	}
+
+	.thanks_page_inner {
+		padding: 56px 18px;
+	}
+
+	.thanks_actions {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+
+	.thanks_primary_cta {
+		width: 100%;
 	}
 }
 
@@ -2843,7 +2994,6 @@ display: none;
 	.footer_column {
 		padding: 0 0 34px;
 		margin-bottom: 34px;
-		border-bottom: 1px solid rgba(210, 168, 102, 0.34);
 	}
 
 	.footer_brand_block::after,
@@ -4125,7 +4275,6 @@ display: none;
 	.footer_column {
 		padding: 0 0 28px;
 		margin-bottom: 28px;
-		border-bottom: 1px solid rgba(210, 168, 102, 0.34);
 	}
 
 	.footer_brand_block::after,

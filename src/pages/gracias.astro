@@ -2,8 +2,40 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Gracias | Elite Cap Cana" robots="noindex">
+<BaseLayout
+	title="Gracias | Elite Cap Cana"
+	description="Gracias por contactar a Elite Cap Cana. Nuestro equipo revisará tu solicitud y te contactará con información personalizada."
+	robots="noindex"
+>
 	<section class="thanks_page" aria-labelledby="thanks_title">
-		<h1 id="thanks_title">Gracias</h1>
+		<img
+			class="thanks_page_image"
+			src="/assets/hero/hero_resort_golf_cap_cana.webp"
+			alt="Vista resort con campo de golf en Cap Cana"
+			loading="eager"
+			decoding="async"
+			fetchpriority="high"
+		/>
+		<div class="thanks_page_overlay thanks_page_overlay_left"></div>
+		<div class="thanks_page_overlay thanks_page_overlay_bottom"></div>
+
+		<div class="thanks_page_inner">
+			<div class="thanks_page_content">
+				<p class="thanks_kicker">Solicitud recibida</p>
+				<h1 id="thanks_title">Gracias por tu interés</h1>
+				<span class="thanks_rule" aria-hidden="true"></span>
+				<p class="thanks_message">
+					Nuestro equipo revisará tu información y te contactará pronto con detalles
+					personalizados sobre disponibilidad, precios y opciones de pago.
+				</p>
+
+				<div class="thanks_actions" aria-label="Próximos pasos">
+					<a class="primary_cta thanks_primary_cta" href="https://www.elitecapcana.com/app" target="_blank" rel="noopener noreferrer">
+						<span>Ver tour virtual</span>
+						<span class="cta_arrow" aria-hidden="true"></span>
+					</a>
+				</div>
+			</div>
+		</div>
 	</section>
 </BaseLayout>
