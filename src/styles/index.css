@@ -26,6 +26,7 @@
 	--section_y: 70px;
 	--gold_rule_width: 55px;
 	--gold_rule_height: 2px;
+	--transition_fast: 180ms ease;
 }
 
 * {
@@ -49,6 +50,7 @@ a {
 	text-decoration: none;
 }
 
+.section_inner,
 .entrance_inner,
 .location_inner,
 .lifestyle_inner,
@@ -59,6 +61,19 @@ a {
 	margin: 0 auto;
 }
 
+.section_header {
+	display: grid;
+	justify-items: center;
+	text-align: center;
+}
+
+.section_copy {
+	position: relative;
+	z-index: 2;
+	font-weight: 500;
+}
+
+.section_title,
 .thanks_page h1,
 .hero_content h1,
 .resort_hero_content h1,
@@ -73,6 +88,12 @@ a {
 	text-wrap: balance;
 }
 
+.section_text {
+	margin: 0;
+	font-weight: 500;
+}
+
+.gold_rule,
 .thanks_rule,
 .entrance_rule,
 .resort_hero_rule,
@@ -82,6 +103,7 @@ a {
 	background: var(--color_gold);
 }
 
+.feature_row,
 .location_place,
 .lifestyle_feature,
 .contact_benefit,
@@ -91,11 +113,20 @@ a {
 	align-items: center;
 }
 
+.line_icon,
 .location_place_icon,
 .stat_icon,
 .contact_benefit_icon,
 .footer_contact svg {
 	flex: 0 0 auto;
+}
+
+.button_base {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+	transition: background var(--transition_fast), border-color var(--transition_fast), color var(--transition_fast), transform var(--transition_fast);
 }
 
 .site_shell {
@@ -494,8 +525,6 @@ a {
 }
 
 .primary_cta {
-	display: inline-flex;
-	align-items: center;
 	justify-content: space-between;
 	width: min(100%, 300px);
 	letter-spacing: 1%;
@@ -508,17 +537,11 @@ a {
 	color: var(--color_warm_white);
 	font-size: 16px;
 	font-weight: 500;
-	line-height: 1;
-	transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
 
 .primary_cta:hover {
 	background: rgba(8, 70, 72, 0.95);
 	border-color: #e3bf7f;
-}
-
-.primary_cta:active {
-	transform: translateY(1px);
 }
 
 .cta_arrow {
@@ -660,10 +683,7 @@ a {
 }
 
 .entrance_copy {
-	position: relative;
-	z-index: 2;
 	max-width: 440px;
-	font-weight: 500;
 }
 
 .entrance_palm_icon {
@@ -691,10 +711,8 @@ a {
 
 .entrance_copy p {
 	max-width: 400px;
-	margin: 0;
 	color: rgba(7, 52, 58, 0.8);
 	font-size: var(--text_body);
-	font-weight: 500;
 	line-height: 1.72;
 }
 
@@ -848,9 +866,6 @@ a {
 }
 
 .location_map_button {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
 	gap: 10px;
 	min-height: 42px;
 	padding: 0 17px;
@@ -860,9 +875,7 @@ a {
 	font-size: 11px;
 	font-weight: 600;
 	letter-spacing: 0.08em;
-	line-height: 1;
 	text-transform: uppercase;
-	transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
 .location_map_button:hover {
@@ -870,10 +883,6 @@ a {
 	background: rgba(210, 168, 102, 0.12);
 	color: var(--color_gold_soft);
 	transform: translateY(-1px);
-}
-
-.location_map_button:active {
-	transform: translateY(1px);
 }
 
 .location_map_button svg,
@@ -1111,12 +1120,6 @@ a {
 	padding: 54px 48px 70px;
 }
 
-.residences_header {
-	display: grid;
-	justify-items: center;
-	text-align: center;
-}
-
 .residences_brand {
 	position: static;
 	gap: 0;
@@ -1144,14 +1147,9 @@ a {
 
 .residences_header h2 {
 	max-width: 860px;
-	margin: 0;
 	color: var(--color_ivory);
-	font-family: var(--font_display);
 	font-size: var(--display_lg);
-	font-weight: 500;
-	letter-spacing: -0.02em;
 	line-height: 0.98;
-	text-wrap: balance;
 }
 
 .residences_header .entrance_rule {
@@ -1160,10 +1158,8 @@ a {
 
 .residences_header p {
 	max-width: 610px;
-	margin: 0;
 	color: rgba(248, 243, 234, 0.88);
 	font-size: 14px;
-	font-weight: 500;
 	line-height: 1.55;
 }
 
@@ -1493,20 +1489,10 @@ a {
 	padding: 64px 48px 70px;
 }
 
-.floor_distribution_header {
-	display: grid;
-	justify-items: center;
-	text-align: center;
-}
-
 .floor_distribution_header h2 {
 	max-width: 780px;
-	margin: 0;
 	color: var(--color_ivory);
-	font-family: var(--font_display);
 	font-size: var(--display_md);
-	font-weight: 500;
-	letter-spacing: -0.02em;
 	line-height: 1;
 }
 
@@ -1516,10 +1502,8 @@ a {
 
 .floor_distribution_header p {
 	max-width: 640px;
-	margin: 0;
 	color: rgba(248, 243, 234, 0.9);
 	font-size: 14px;
-	font-weight: 500;
 	line-height: 1.55;
 }
 
@@ -1807,10 +1791,8 @@ a {
 
 .contact_content > p {
 	max-width: 355px;
-	margin: 0;
 	color: rgba(7, 52, 58, 0.9);
 	font-size: 14px;
-	font-weight: 500;
 	line-height: 1.65;
 }
 
@@ -2054,9 +2036,6 @@ a {
 
 .contact_submit {
 	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	gap: 28px;
 	width: 100%;
 	min-height: 51px;
@@ -2068,22 +2047,21 @@ a {
 	font-family: var(--font_body);
 	font-size: 16px;
 	font-weight: 500;
-	line-height: 1;
 	cursor: pointer;
-	transition: transform 180ms ease, filter 180ms ease;
+	transition: transform var(--transition_fast), filter var(--transition_fast);
 }
 
 .contact_submit:hover {
 	filter: brightness(1.04);
 }
 
-.contact_submit:active {
-	transform: translateY(1px);
-}
-
 .contact_submit .cta_arrow {
 	position: relative;
 	width: 31px;
+}
+
+.button_base:active {
+	transform: translateY(1px);
 }
 
 .contact_privacy {

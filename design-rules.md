@@ -1,102 +1,125 @@
-# Design Rules for Premium Real Estate Landing Pages
+# Reglas generales de diseño y CSS
 
 ## Principio central
 
-La landing debe sentirse premium, especifica para el proyecto y orientada a conversion. No debe parecer una plantilla generica.
+Cada proyecto debe sentirse claro, consistente y diseñado con intención. No debe parecer una plantilla genérica ni una suma de decisiones aisladas.
 
-## Que significa premium en este sistema
+Estas reglas son obligatorias para mantener orden visual y técnico entre proyectos. Si una excepción es necesaria, debe responder a una razón concreta del layout o del producto.
 
-Premium no significa saturar con efectos. Premium significa:
+## Composición visual
 
-- Composicion limpia.
-- Jerarquia visual clara.
-- Mucho control del espacio.
-- Fotografia o renders protagonistas.
-- Tipografia con caracter editorial.
-- CTAs visibles pero elegantes.
-- Microcopy confiable y concreto.
-- Consistencia visual entre secciones.
-- Sensacion de exclusividad, confianza y deseo.
+- Mantener jerarquía visual clara: título, subtítulo, contenido principal y acciones.
+- Usar espacios de forma consistente; no llenar cada área disponible con contenido.
+- Alternar secciones densas con secciones más respiradas cuando el flujo lo necesite.
+- Usar imágenes, iconos y recursos visuales solo cuando ayuden a entender o reforzar el contenido.
+- Mantener cada sección o componente con un objetivo claro.
+- Evitar estilos decorativos que no aporten estructura, legibilidad o intención.
 
-## Reglas de composicion
+## Sistema CSS
 
-- Usar grids claros y alineaciones consistentes.
-- Evitar llenar cada espacio con contenido.
-- Crear ritmo entre secciones densas y secciones respiradas.
-- Alternar bloques visuales grandes con texto breve.
-- Usar titulares fuertes y subtitulares concretos.
-- Mantener cada seccion con un objetivo claro.
-
-## Reglas de conversion
-
-Cada landing debe responder rapidamente:
-
-1. Que es el proyecto.
-2. Donde esta ubicado.
-3. Para quien es ideal.
-4. Por que es deseable.
-5. Que accion debe tomar el usuario.
-
-## CTAs recomendados
-
-- Solicitar informacion
-- Agendar visita
-- Descargar brochure
-- Hablar por WhatsApp
-- Ver disponibilidad
-- Cotizar unidad
-
-## Evitar
-
-- Iconos genericos sin criterio.
-- Exceso de texto en hero.
-- Formularios demasiado largos.
-- Secciones sin CTA o sin objetivo.
-- Copiar referencias de forma literal.
-- Usar imagenes genericas si existen assets reales del proyecto.
-- Prometer caracteristicas no verificadas.
-
-## Reglas para IA generativa visual
-
-Cuando se pidan imagenes conceptuales:
-
-- Usar siempre `imagegen` para generar la imagen conceptual.
-- Guardar la imagen generada dentro del proyecto o carpeta del lote correspondiente.
-- No pasar a especificacion tecnica ni implementacion sin esa imagen generada.
-- Generar 3 secciones consecutivas por lote.
-- Mantener una misma direccion visual en todo el lote.
-- Incluir suficiente detalle para que el resultado pueda pasar a codigo.
-- Evitar texto ilegible como dependencia critica.
-- Usar placeholders realistas para renders, mapas, formularios y fotografias.
-- Aceptar que la imagen pueda incluir detalles especificos inventados como fechas, telefonos, precios secundarios, textos legales o microcopy de maqueta, siempre que funcionen como guia visual y no como copy final.
-- No bloquear el flujo por esos detalles de maqueta; deben corregirse despues en la especificacion tecnica y en la implementacion.
-- Entregar siempre especificacion textual junto a la imagen.
-
-## Reglas para pasar a codigo
+- Usar CSS propio como sistema principal de estilos.
+- No usar Tailwind.
+- No usar CSS-in-JS, UI kits genéricos ni clases utilitarias como base visual.
+- Colocar tokens, resets mínimos y patrones reutilizables al inicio del CSS.
+- Es muy importante mantener orden y consistencia en el CSS y al construir cada sección; cada nueva sección debe seguir los tokens, patrones, naming y estructura definidos antes de crear estilos propios.
+- Crear estilos específicos solo cuando un patrón común no alcance.
+- Evitar duplicar reglas de tipografía, botones, iconos, contenedores y textos.
 
 ## Reglas tecnicas obligatorias para construir landings
 
-- Todas las landings deben construirse en Astro.
-- Antes de crear un proyecto Astro nuevo, revisar la documentacion oficial de instalacion en https://docs.astro.build/en/getting-started/ y usar la version estable mas reciente disponible.
-- Usar CSS propio como sistema principal de estilos. No depender de Tailwind, CSS-in-JS, UI kits genericos o clases utilitarias como base visual.
-- Todas las clases CSS creadas para la landing deben usar formato snake_case.
+- Para landings, aplicar todas las reglas generales de diseño y CSS de este documento.
 - El implementador tiene libertad total para crear assets, imagenes, texturas, fondos, iconos, ilustraciones y recursos visuales si mejoran el resultado premium.
 - El implementador puede buscar y usar tipografias de cualquier recurso valido, siempre que el resultado mejore la direccion visual y mantenga legibilidad.
-- Se permiten animaciones, transiciones, microinteracciones, carruseles, sliders, galerias, tabs, acordeones, menus, formularios avanzados y otros elementos UI cuando ayuden al objetivo de conversion y a la sensacion premium.
+- Se permiten animaciones, transiciones, microinteracciones, carruseles, sliders, galerias, tabs, acordeones, menus, formularios avanzados y otros elementos UI cuando ayuden al objetivo de conversion y se sientan intencionales, fluidos, responsivos y accesibles.
 - Se permite buscar en internet cualquier documentacion, referencia o recurso necesario para lograr el mejor resultado posible.
-- Las animaciones y elementos UI deben sentirse intencionales, fluidos y responsivos; no deben distraer ni perjudicar performance, accesibilidad o conversion.
 
-## Especificacion minima para implementacion
+## Reglas para imagenes conceptuales
 
-Cada lote visual debe convertirse en:
+- Usar siempre `imagegen` para generar las imagenes conceptuales.
 
-- Nombre de seccion.
-- Objetivo de seccion.
-- Copy sugerido.
-- Jerarquia visual.
-- Layout desktop.
-- Layout mobile.
-- Componentes necesarios.
-- Interacciones.
-- Notas de espaciado.
-- Assets requeridos.
+## Tokens base
+
+Los valores compartidos deben vivir en `:root`. Esta es la base mínima:
+
+```css
+:root {
+	--site_max_width: 1280px;
+	--font_display: "Cormorant Garamond", Georgia, serif;
+	--font_body: "Manrope", Arial, sans-serif;
+}
+```
+
+- Usar tokens para colores, fuentes, anchos máximos, espacios principales, radios y transiciones repetidas.
+- Mantener los nombres de tokens descriptivos y en `snake_case`.
+- No crear variables para valores que aparecen una sola vez.
+- Usar `--site_max_width: 1280px;` como ancho máximo general de página.
+
+## Grid vs Flexbox
+
+- Usar `display: grid` para estructuras bidimensionales: layouts de página, secciones con columnas, galerías, cards en grilla y distribuciones con filas y columnas.
+- Usar `display: flex` para estructuras lineales: navegación, botones, filas de icono + texto, grupos de acciones y listas simples.
+- No usar Grid donde Flexbox resuelve una sola línea o una sola columna.
+- No usar Flexbox para simular grillas complejas.
+- Cada sección principal debe tener un contenedor interno centrado y limitado por `--site_max_width`.
+
+## Breakpoint único
+
+Trabajar siempre con un solo breakpoint:
+
+```css
+@media (max-width: 1024px) {
+	/* Ajustes responsive */
+}
+```
+
+- No crear breakpoints adicionales salvo instrucción explícita.
+- En desktop se define la composición principal.
+- En `1024px` se resuelve tablet y mobile usando layouts fluidos, `clamp()`, `min()`, `max()`, Grid y Flexbox.
+- Evitar reglas responsive dispersas fuera de este breakpoint.
+
+## Nombramiento de clases
+
+- Todas las clases CSS deben usar `snake_case`.
+- Los nombres deben describir función, bloque o patrón; no colores temporales ni posiciones accidentales.
+- Usar nombres consistentes por patrón:
+  - `section_inner` para contenedores centrados.
+  - `section_header` para encabezados de sección.
+  - `section_copy` para bloques de texto.
+  - `section_title` para titulares de sección.
+  - `section_text` para textos introductorios.
+  - `feature_row` para filas de icono + texto.
+  - `line_icon` para iconos SVG de línea.
+  - `button_base` para comportamiento común de botones y enlaces tipo botón.
+
+## Patrones reutilizables
+
+Primero buscar si existe un patrón aplicable antes de crear una clase nueva. Combinar clase común + clase específica cuando haga falta una variación:
+
+```html
+<section class="example_section">
+	<div class="example_inner section_inner">
+		<header class="example_header section_header">
+			<h2 class="section_title">Título de sección</h2>
+			<p class="section_text">Texto introductorio claro y breve.</p>
+		</header>
+	</div>
+</section>
+```
+
+- La clase común define el comportamiento repetido.
+- La clase específica ajusta solo lo propio del bloque.
+- No duplicar estilos base dentro de cada sección o componente.
+- Si un patrón se repite tres veces, debe convertirse en regla compartida.
+
+## Evitar
+
+- Clases con nombres inconsistentes, abreviados o mezclando idiomas sin razón.
+- Breakpoints múltiples para resolver casos puntuales.
+- Componentes visuales con estilos únicos cuando pueden usar patrones comunes.
+- Iconos genéricos sin propósito.
+- Exceso de texto dentro de cards, botones, formularios o encabezados.
+- Efectos, animaciones o decoraciones que perjudiquen legibilidad, rendimiento o accesibilidad.
+
+## Regla final
+
+La consistencia es parte del diseño. Antes de escribir CSS nuevo, revisar tokens, patrones existentes, naming y el breakpoint único. El resultado debe ser fácil de leer, fácil de mantener y suficientemente claro para que otra persona o una IA puedan continuar el proyecto sin reinterpretar el sistema.
